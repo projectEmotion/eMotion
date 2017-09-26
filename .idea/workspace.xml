@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e9a0a9e-f7a7-451d-885f-42bbf0ca6c00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vehicle.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Vehicle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="63">
+              <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -69,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-441">
-              <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="63">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -120,6 +121,7 @@
         <option value="$PROJECT_DIR$/web/views/css/style.css" />
         <option value="$PROJECT_DIR$/web/views/connexion.html" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php" />
       </list>
     </option>
   </component>
@@ -430,12 +432,12 @@
       <option name="presentableId" value="Default" />
       <updated>1506347060123</updated>
       <workItem from="1506347064566" duration="5812000" />
-      <workItem from="1506409773850" duration="20101000" />
+      <workItem from="1506409773850" duration="20217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26596000" />
+    <option name="totallyTimeSpent" value="26712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -745,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/branch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -797,7 +791,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
           <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
           <folding />
         </state>
