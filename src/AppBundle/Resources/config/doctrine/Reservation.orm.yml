@@ -1,0 +1,26 @@
+AppBundle\Entity\Reservation:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ReservationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        price:
+            type: float
+        startDate:
+            type: datetime
+            column: start_date
+        endDate:
+            type: datetime
+            column: end_date
+        idVehicle:
+            type: integer
+            column: id_vehicle
+        idUser:
+            type: integer
+            column: id_user
+    lifecycleCallbacks: {  }
