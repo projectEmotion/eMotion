@@ -1,0 +1,40 @@
+AppBundle\Entity\Vehicle:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\VehicleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        brand:
+            type: string
+            length: 255
+        model:
+            type: string
+            length: 255
+        serialNumber:
+            type: string
+            length: 255
+        color:
+            type: string
+            length: 255
+        licencePlate:
+            type: string
+            length: 255
+        kilometer:
+            type: integer
+        dateOfPurchase:
+            type: datetime
+            column: date_of_purchase
+        priceOfPurchase:
+            type: integer
+            column: price_of_purchase
+        availability:
+            type: boolean
+        vehicleType:
+            type: boolean
+            column: vehicle_type
+    lifecycleCallbacks: {  }
