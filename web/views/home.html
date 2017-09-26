@@ -23,7 +23,7 @@
     div.login{
         margin-top: 40px;
     }
-    button.btn{
+    div.btn{
         border: none;
         background-color: limegreen;
         border-radius: 20% / 50%;
@@ -62,7 +62,7 @@
         padding-right: 0;
     }
     div.bloc-recherche{
-        background: white;
+        background: rgba(255, 255, 255, 0.45);
         margin-top: 130px;
         text-align: center;
         margin-left: auto;
@@ -90,6 +90,11 @@
         margin-top: 30px;
        paddin-bottom: 30px;
     }
+    div.bloc1{
+        margin-bottom: 30px;
+    }
+    input{
+        width: 100%;}
 </style>
 <body>
     <div class="container-fluid no-padd">
@@ -97,26 +102,29 @@
             <div class="header">
                 <div class="container">
                     <div class="menu">eMotion</div>
+                    <div class="Links"><a href="connexion.html">Login</a></div>
                     <div class="bloc-recherche col-md-12">
-                        <div class="col-md-12">
-                            <label class="top"  for="">Lieu de retrait</label>
-                            <input class="top" type="text">
-                        </div>
-                        <div class="col-md-12">
-                            <label class="top" for="">Lieu de retour</label>
-                            <input class="top" type="text">
-                        </div>
-                        <div class="col-md-12">
-                            <label class="top" for="">Date de retrait</label>
-                            <input class="top" type="text">
-                        </div>
-                        <div class="col-md-12">
-                            <label class="top" for="">Date de retour</label>
-                            <input class="top" type="text">
+                        <div class="bloc1">
+                            <div class="col-md-12">
+                                <label class="top"  for="">Lieu de retrait</label>
+                                <input class="top" type="text">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="top" for="">Lieu de retour</label>
+                                <input class="top" type="text">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="top" for="">Date de retrait</label>
+                                <input class="top" type="text">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="top" for="">Date de retour</label>
+                                <input class="top" type="text">
+                            </div>
                         </div>
                         <div class="recherche">
                             <div class="button-recherche">
-                                <button class="btn">Recherche</button>
+                                <div class="btn">Recherche</div>
                             </div>
                         </div>
                     </div>
