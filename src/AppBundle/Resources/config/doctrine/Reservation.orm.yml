@@ -20,16 +20,16 @@ AppBundle\Entity\Reservation:
     fields:
         price:
             type: float
-            nullable: false
+            nullable: true
             precision: 10
             scale: 0
         startDate:
             type: datetime
-            nullable: false
+            nullable: true
             column: start_date
         endDate:
             type: datetime
-            nullable: false
+            nullable: true
             column: end_date
     manyToOne:
         idUser:

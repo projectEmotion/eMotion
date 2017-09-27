@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e9a0a9e-f7a7-451d-885f-42bbf0ca6c00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +21,8 @@
       <file leaf-file-name="Vehicle.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="34">
+              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReservationAdmin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReservationAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#36#79#0#PHP" expanded="true" />
               </folding>
@@ -54,7 +55,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
               <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-              <folding />
+              <folding>
+                <marker date="1506515344715" expanded="true" signature="1492:1721" ph="admin.vehicle: &lt;6 keys&gt;" />
+                <marker date="1506515344715" expanded="true" signature="1652:1721" ph="tags: &lt;1 item&gt;" />
+                <marker date="1506515344715" expanded="true" signature="1720:1721" ph="Vehicle" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +68,19 @@
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="29" />
-              <folding />
+              <caret line="90" column="8" lean-forward="false" selection-start-line="90" selection-start-column="8" selection-end-line="91" selection-end-column="29" />
+              <folding>
+                <marker date="1506515344676" expanded="true" signature="1264:1855" ph="doctrine: &lt;2 keys&gt;" />
+                <marker date="1506515344676" expanded="true" signature="1817:1855" ph="orm: &lt;4 keys&gt;" />
+                <marker date="1506515344676" expanded="true" signature="2369:2564" ph="fos_user: &lt;4 keys&gt;" />
+                <marker date="1506515344676" expanded="true" signature="2435:2439" ph="main" />
+                <marker date="1506515344676" expanded="true" signature="2456:2477" ph="AppBundle…ntity\User" />
+                <marker date="1506515344676" expanded="true" signature="2482:2564" ph="from_email: &lt;2 keys&gt;" />
+                <marker date="1506515344676" expanded="true" signature="2511:2532" ph="noreply@example.com" />
+                <marker date="1506515344676" expanded="true" signature="2554:2564" ph="Demo App" />
+                <marker date="1506515344676" expanded="true" signature="2588:2611" ph="default_contexts: [1 item]" />
+                <marker date="1506515344676" expanded="true" signature="2607:2610" ph="cms" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +88,8 @@
       <file leaf-file-name="VehiculeAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="16" column="5" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="146">
+              <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
               <folding>
                 <element signature="e#36#79#0#PHP" expanded="true" />
               </folding>
@@ -81,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Controller/CoreController.php">
+      <file leaf-file-name="Vehicle.orm.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Vehicle.orm.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reservation.orm.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -138,9 +164,9 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml" />
       </list>
     </option>
   </component>
@@ -161,10 +187,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="583" />
-    <option name="y" value="166" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="x" value="-7" />
+    <option name="width" value="1381" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -197,36 +222,37 @@
             <path>
               <item name="projetEmotion" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetEmotion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="projetEmotion" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetEmotion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sonata-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="projetEmotion" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetEmotion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sonata-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="projetEmotion" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetEmotion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sonata-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="projetEmotion" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetEmotion" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sonata-project" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -324,18 +350,18 @@
       <updated>1506347060123</updated>
       <workItem from="1506347064566" duration="5812000" />
       <workItem from="1506409773850" duration="20217000" />
-      <workItem from="1506498316268" duration="8299000" />
+      <workItem from="1506498316268" duration="10239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35011000" />
+    <option name="totallyTimeSpent" value="36951000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="583" y="166" width="1382" height="754" extended-state="0" />
+    <frame x="-7" y="0" width="1381" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1860817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18622255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -365,14 +391,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/branch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -725,27 +743,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
+          <folding>
+            <marker date="1506515344715" expanded="true" signature="1492:1721" ph="admin.vehicle: &lt;6 keys&gt;" />
+            <marker date="1506515344715" expanded="true" signature="1652:1721" ph="tags: &lt;1 item&gt;" />
+            <marker date="1506515344715" expanded="true" signature="1720:1721" ph="Vehicle" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="29" />
-          <folding />
+          <caret line="90" column="8" lean-forward="false" selection-start-line="90" selection-start-column="8" selection-end-line="91" selection-end-column="29" />
+          <folding>
+            <marker date="1506515344676" expanded="true" signature="1264:1855" ph="doctrine: &lt;2 keys&gt;" />
+            <marker date="1506515344676" expanded="true" signature="1817:1855" ph="orm: &lt;4 keys&gt;" />
+            <marker date="1506515344676" expanded="true" signature="2369:2564" ph="fos_user: &lt;4 keys&gt;" />
+            <marker date="1506515344676" expanded="true" signature="2435:2439" ph="main" />
+            <marker date="1506515344676" expanded="true" signature="2456:2477" ph="AppBundle…ntity\User" />
+            <marker date="1506515344676" expanded="true" signature="2482:2564" ph="from_email: &lt;2 keys&gt;" />
+            <marker date="1506515344676" expanded="true" signature="2511:2532" ph="noreply@example.com" />
+            <marker date="1506515344676" expanded="true" signature="2554:2564" ph="Demo App" />
+            <marker date="1506515344676" expanded="true" signature="2588:2611" ph="default_contexts: [1 item]" />
+            <marker date="1506515344676" expanded="true" signature="2607:2610" ph="cms" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="34">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -797,23 +822,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="e#36#79#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        <state relative-caret-position="146">
+          <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
           <folding>
             <element signature="e#36#79#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Vehicle.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
