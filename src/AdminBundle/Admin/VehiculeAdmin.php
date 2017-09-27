@@ -5,9 +5,16 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class VehiculeAdmin extends AbstractAdmin
 {
+    public function toString($object)
+    {
+        return $object instanceof Vehicle
+            ? $object->getTitle()
+            : 'Vehicule'; // shown in the breadcrumb on the create view
+    }
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('brand','text');
@@ -19,7 +26,12 @@ class VehiculeAdmin extends AbstractAdmin
         $formMapper->add('date_of_purchase','datetime');
         $formMapper->add('price_of_purchase','text');
         $formMapper->add('availability','checkbox');
-        $formMapper->add('vehicle_type','checkbox');
+        $formMapper->add('vehicle_type',ChoiceType::class, array(
+            'choices' => array(
+                'Scooter' => true,
+                'Voiture' => false,
+            ),
+        ));
     }
     
     protected function configureListFields(ListMapper $listMapper)
