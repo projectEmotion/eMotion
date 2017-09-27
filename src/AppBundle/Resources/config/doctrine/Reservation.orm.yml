@@ -1,31 +1,45 @@
 AppBundle\Entity\Reservation:
     type: entity
-    table: null
-    repositoryClass: AppBundle\Repository\ReservationRepository
+    table: reservation
+    indexes:
+        IDX_42C84955C51D4DF6:
+            columns:
+                - id_vehicle
+        IDX_42C849556B3CA4B:
+            columns:
+                - id_user
     id:
         id:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
             id: true
             generator:
-                strategy: AUTO
+                strategy: IDENTITY
     fields:
         price:
             type: float
-            nullable: true
+            nullable: false
+            precision: 10
+            scale: 0
         startDate:
             type: datetime
+            nullable: false
             column: start_date
-            nullable: true
         endDate:
             type: datetime
+            nullable: false
             column: end_date
-            nullable: true
-        idVehicle:
-            type: integer
-            column: id_vehicle
-            nullable: true
+    manyToOne:
         idUser:
-            type: integer
-            column: id_user
-            nullable: true
+            targetEntity: User
+            joinColumns:
+                id_user:
+                    referencedColumnName: id
+        idVehicle:
+            targetEntity: Vehicle
+            joinColumns:
+                id_vehicle:
+                    referencedColumnName: id
     lifecycleCallbacks: {  }

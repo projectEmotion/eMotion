@@ -1,73 +1,53 @@
 <?php
 
 namespace AppBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Reservation
- *
- * @ORM\Table(name="reservation", indexes={@ORM\Index(name="IDX_42C84955C51D4DF6", columns={"id_vehicle"}), @ORM\Index(name="IDX_42C849556B3CA4B", columns={"id_user"})})
- * @ORM\Entity
  */
 class Reservation
 {
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @var int
      */
     private $id;
 
     /**
      * @var float
-     *
-     * @ORM\Column(name="price", type="float", precision=10, scale=0, nullable=false)
      */
     private $price;
 
     /**
      * @var \DateTime
-     *
-     * @ORM\Column(name="start_date", type="datetime", nullable=false)
      */
     private $startDate;
 
     /**
      * @var \DateTime
-     *
-     * @ORM\Column(name="end_date", type="datetime", nullable=false)
      */
     private $endDate;
 
     /**
-     * @var \AppBundle\Entity\User
-     *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id")
-     * })
-     */
-    private $idUser;
-
-    /**
-     * @var \AppBundle\Entity\Vehicle
-     *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Vehicle")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_vehicle", referencedColumnName="id")
-     * })
+     * @var int
+     * @ORM\ManyToOne(targetEntity="Vehicle", inversedBy="reservations")
+     * @ORM\JoinColumn(name="id_vehicle", referencedColumnName="id")
      */
     private $idVehicle;
 
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="reservations")
+     * @ORM\JoinColumn(name="idUser", referencedColumnName="id")
+     *
+     */
+    private $idUser;
 
 
     /**
      * Get id
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -147,37 +127,13 @@ class Reservation
     }
 
     /**
-     * Set idUser
-     *
-     * @param \AppBundle\Entity\User $idUser
-     *
-     * @return Reservation
-     */
-    public function setIdUser(\AppBundle\Entity\User $idUser = null)
-    {
-        $this->idUser = $idUser;
-
-        return $this;
-    }
-
-    /**
-     * Get idUser
-     *
-     * @return \AppBundle\Entity\User
-     */
-    public function getIdUser()
-    {
-        return $this->idUser;
-    }
-
-    /**
      * Set idVehicle
      *
-     * @param \AppBundle\Entity\Vehicle $idVehicle
+     * @param integer $idVehicle
      *
      * @return Reservation
      */
-    public function setIdVehicle(\AppBundle\Entity\Vehicle $idVehicle = null)
+    public function setIdVehicle($idVehicle)
     {
         $this->idVehicle = $idVehicle;
 
@@ -187,10 +143,35 @@ class Reservation
     /**
      * Get idVehicle
      *
-     * @return \AppBundle\Entity\Vehicle
+     * @return int
      */
     public function getIdVehicle()
     {
         return $this->idVehicle;
     }
+
+    /**
+     * Set idUser
+     *
+     * @param integer $idUser
+     *
+     * @return Reservation
+     */
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    /**
+     * Get idUser
+     *
+     * @return int
+     */
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
 }
+

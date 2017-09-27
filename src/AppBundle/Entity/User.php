@@ -20,7 +20,7 @@ class User extends BaseUser{
     /**
      * @ORM\Column(name="date_of_birth", type="datetime")
      */
-    private $date_of_birth;
+    private $dateOfBirth;
     
      /**
      * @ORM\Column(name="adress", type="string")
@@ -35,7 +35,7 @@ class User extends BaseUser{
     /**
      * @ORM\Column(name="number_licence", type="integer")
      */
-    private $number_licence;
+    private $numberLicence;
 
     public function __construct()
     {

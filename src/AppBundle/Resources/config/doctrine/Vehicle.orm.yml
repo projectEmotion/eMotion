@@ -1,49 +1,68 @@
 AppBundle\Entity\Vehicle:
     type: entity
-    table: null
-    repositoryClass: AppBundle\Repository\VehicleRepository
+    table: vehicle
     id:
         id:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
             id: true
             generator:
-                strategy: AUTO
+                strategy: IDENTITY
     fields:
         brand:
             type: string
+            nullable: false
             length: 255
+            options:
+                fixed: false
         model:
             type: string
+            nullable: true
             length: 255
-            nullable : true
+            options:
+                fixed: false
         serialNumber:
             type: string
+            nullable: true
             length: 255
-            nullable : true
+            options:
+                fixed: false
+            column: serial_number
         color:
             type: string
+            nullable: true
             length: 255
-            nullable : true
+            options:
+                fixed: false
         licencePlate:
             type: string
+            nullable: true
             length: 255
-            nullable : true
+            options:
+                fixed: false
+            column: licence_plate
         kilometer:
             type: integer
-            nullable : true
+            nullable: true
+            options:
+                unsigned: false
         dateOfPurchase:
             type: datetime
+            nullable: true
             column: date_of_purchase
-            nullable : true
         priceOfPurchase:
             type: integer
+            nullable: true
+            options:
+                unsigned: false
             column: price_of_purchase
-            nullable : true
         availability:
             type: boolean
-            nullable : true
+            nullable: true
         vehicleType:
             type: boolean
+            nullable: true
             column: vehicle_type
-            nullable : true
     lifecycleCallbacks: {  }

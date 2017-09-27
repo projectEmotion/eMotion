@@ -42,7 +42,7 @@ services:
             - AppBundle\Entity\Vehicle
             - ~
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Vehicle", label: Vehicle }
+            - { name: sonata.admin, manager_type: orm, group: "Emotion",  label: Vehicle }
         calls:
             - [ setTranslationDomain, [AppBundle]]
         public: true
@@ -55,7 +55,20 @@ services:
             - AppBundle\Entity\Reservation
             - ~
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Reservation", label: Reservation }
+            - { name: sonata.admin, manager_type: orm, group: "Emotion",  label: Reservation }
+        calls:
+            - [ setTranslationDomain, [AppBundle]]
+        public: true
+        EnitityManager: ~
+        
+    admin.user:
+        class: AdminBundle\Admin\UserAdmin
+        arguments:
+            - ~
+            - AppBundle\Entity\User
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Emotion", label: User }
         calls:
             - [ setTranslationDomain, [AppBundle]]
         public: true

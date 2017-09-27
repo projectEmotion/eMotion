@@ -1,72 +1,102 @@
 <?php
 
 namespace AppBundle\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Vehicle
+ *
+ * @ORM\Table(name="vehicle")
+ * @ORM\Entity
  */
 class Vehicle
 {
     /**
-     * @var int
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="brand", type="string", length=255, nullable=false)
      */
     private $brand;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="model", type="string", length=255, nullable=true)
      */
     private $model;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="serial_number", type="string", length=255, nullable=true)
      */
     private $serialNumber;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="color", type="string", length=255, nullable=true)
      */
     private $color;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="licence_plate", type="string", length=255, nullable=true)
      */
     private $licencePlate;
 
     /**
-     * @var int
+     * @var integer
+     *
+     * @ORM\Column(name="kilometer", type="integer", nullable=true)
      */
     private $kilometer;
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="date_of_purchase", type="datetime", nullable=true)
      */
     private $dateOfPurchase;
 
     /**
-     * @var int
+     * @var integer
+     *
+     * @ORM\Column(name="price_of_purchase", type="integer", nullable=true)
      */
     private $priceOfPurchase;
 
     /**
-     * @var bool
+     * @var boolean
+     *
+     * @ORM\Column(name="availability", type="boolean", nullable=true)
      */
     private $availability;
 
     /**
-     * @var bool
+     * @var boolean
+     *
+     * @ORM\Column(name="vehicle_type", type="boolean", nullable=true)
      */
     private $vehicleType;
+
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -210,7 +240,7 @@ class Vehicle
     /**
      * Get kilometer
      *
-     * @return int
+     * @return integer
      */
     public function getKilometer()
     {
@@ -258,7 +288,7 @@ class Vehicle
     /**
      * Get priceOfPurchase
      *
-     * @return int
+     * @return integer
      */
     public function getPriceOfPurchase()
     {
@@ -282,7 +312,7 @@ class Vehicle
     /**
      * Get availability
      *
-     * @return bool
+     * @return boolean
      */
     public function getAvailability()
     {
@@ -306,11 +336,10 @@ class Vehicle
     /**
      * Get vehicleType
      *
-     * @return bool
+     * @return boolean
      */
     public function getVehicleType()
     {
         return $this->vehicleType;
     }
 }
-
