@@ -11,11 +11,15 @@ class ReservationAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('price','text');
+        $formMapper->add('start_date','date');
+        $formMapper->add('end_date','date');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->addIdentifier('price');
         $listMapper->addIdentifier('id');
+        $listMapper->addIdentifier('price');
+        $listMapper->addIdentifier('start_date');
+        $listMapper->addIdentifier('end_date');
     }
 }
