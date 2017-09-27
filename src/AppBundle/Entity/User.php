@@ -45,6 +45,7 @@ class User extends BaseUser{
 
     }
 
+
     /**
      * Set dateOfBirth
      *
@@ -54,7 +55,7 @@ class User extends BaseUser{
      */
     public function setDateOfBirth($dateOfBirth)
     {
-        $this->date_of_birth = $dateOfBirth;
+        $this->dateOfBirth = $dateOfBirth;
 
         return $this;
     }
@@ -66,7 +67,7 @@ class User extends BaseUser{
      */
     public function getDateOfBirth()
     {
-        return $this->date_of_birth;
+        return $this->dateOfBirth;
     }
 
     /**
@@ -126,7 +127,7 @@ class User extends BaseUser{
      */
     public function setNumberLicence($numberLicence)
     {
-        $this->number_licence = $numberLicence;
+        $this->numberLicence = $numberLicence;
 
         return $this;
     }
@@ -138,6 +139,6 @@ class User extends BaseUser{
      */
     public function getNumberLicence()
     {
-        return $this->number_licence;
+        return $this->numberLicence;
     }
 }
