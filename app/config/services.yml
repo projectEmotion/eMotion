@@ -33,3 +33,17 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    
+       
+    admin.vehicle:
+        class: AdminBundle\Admin\VehiculeAdmin
+        arguments:
+            - ~
+            - AppBundle\Entity\Vehicle
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Vehicle", label: Vehicle }
+        calls:
+            - [ setTranslationDomain, [AppBundle]]
+        public: true
+        EnitityManager: ~

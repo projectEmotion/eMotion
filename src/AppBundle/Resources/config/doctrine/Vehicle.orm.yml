@@ -15,26 +15,35 @@ AppBundle\Entity\Vehicle:
         model:
             type: string
             length: 255
+            nullable : true
         serialNumber:
             type: string
             length: 255
+            nullable : true
         color:
             type: string
             length: 255
+            nullable : true
         licencePlate:
             type: string
             length: 255
+            nullable : true
         kilometer:
             type: integer
+            nullable : true
         dateOfPurchase:
             type: datetime
             column: date_of_purchase
+            nullable : true
         priceOfPurchase:
             type: integer
             column: price_of_purchase
+            nullable : true
         availability:
             type: boolean
+            nullable : true
         vehicleType:
             type: boolean
             column: vehicle_type
+            nullable : true
     lifecycleCallbacks: {  }
