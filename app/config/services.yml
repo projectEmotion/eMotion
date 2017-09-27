@@ -34,6 +34,12 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
     
+    #------- FOUSER BUNDLE ----------------#
+    app.form.registration:
+        class: FrontBundle\Form\UserInscriptionType
+        tags:
+            - { name: form.type, alias: app_user_registration }
+    #------- FOUSER BUNDLE ----------------#
        
     admin.vehicle:
         class: AdminBundle\Admin\VehiculeAdmin

@@ -84,6 +84,9 @@ fos_user:
     from_email:
         address: "noreply@example.com"
         sender_name: "Demo App"
+    registration:
+        form:
+            type: FrontBundle\Form\UserInscriptionType
     
 sonata_block:
     default_contexts: [cms]
