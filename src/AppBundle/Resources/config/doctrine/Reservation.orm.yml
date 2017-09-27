@@ -11,16 +11,21 @@ AppBundle\Entity\Reservation:
     fields:
         price:
             type: float
+            nullable: true
         startDate:
             type: datetime
             column: start_date
+            nullable: true
         endDate:
             type: datetime
             column: end_date
+            nullable: true
         idVehicle:
             type: integer
             column: id_vehicle
+            nullable: true
         idUser:
             type: integer
             column: id_user
+            nullable: true
     lifecycleCallbacks: {  }

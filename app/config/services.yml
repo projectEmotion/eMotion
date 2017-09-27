@@ -47,3 +47,16 @@ services:
             - [ setTranslationDomain, [AppBundle]]
         public: true
         EnitityManager: ~
+
+    admin.reservation:
+        class: AdminBundle\Admin\ReservationAdmin
+        arguments:
+            - ~
+            - AppBundle\Entity\Reservation
+            - ~
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Reservation", label: Reservation }
+        calls:
+            - [ setTranslationDomain, [AppBundle]]
+        public: true
+        EnitityManager: ~
