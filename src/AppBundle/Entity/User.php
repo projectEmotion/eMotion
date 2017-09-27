@@ -37,6 +37,16 @@ class User extends BaseUser{
      */
     private $numberLicence;
 
+    /**
+     * @ORM\Column(name="codePostal", type="integer")
+     */
+    private $codePostal;
+
+    /**
+     * @ORM\Column(name="ville", type="string")
+     */
+    private $ville;
+
     public function __construct()
     {
         parent::__construct();
