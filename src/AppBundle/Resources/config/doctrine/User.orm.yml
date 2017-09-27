@@ -32,6 +32,18 @@ AppBundle\Entity\User:
             options:
                 fixed: false
             column: Adress
+        codePostal:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        ville:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: Ville
         phone:
             type: integer
             nullable: false
