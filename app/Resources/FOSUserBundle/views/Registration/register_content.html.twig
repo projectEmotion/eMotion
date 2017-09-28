@@ -88,7 +88,7 @@
         }
     }
 </style>
-{{ dump(form)}}
+{{form_errors(form)}}
 <div class="container-fluid no-padd">
     <div class="bg-img">
         <div class="header">
@@ -96,8 +96,8 @@
                 <div class="menu">eMotion</div>
                 <div class="Links"><a href="home.html">Home</a></div>
                 <div class="container part1 col-md-12">
-                    <form action="{{ path('fos_user_registration_register') }}" method="post">
-                        {{form_errors(form)}}
+                    <form action="{{ path('fos_user_registration_register') }}" method="post" class="fos_user_registration_register">
+                        
                         <div class="title">Inscription</div>
                         <div class="col-md-3">
                             <div class="login">
@@ -122,6 +122,9 @@
                                 <div class="input-email alert">
                                     {{form_label(form.plainPassword)}}
                                     {{form_widget(form.plainPassword)}}
+                                </div>
+                                <div class="input-email alert">
+                                    {{ form_row(form._token) }}
                                 </div>
                             </div>
                         </div>

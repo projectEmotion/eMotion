@@ -19,7 +19,7 @@ class UserAdmin extends AbstractAdmin
     {
         $formMapper->add('username','text');
         $formMapper->add('email','text');
-        $formMapper->add('password','text');
+        //$formMapper->add('password','text');
         $formMapper->add('adress','text');
         $formMapper->add('phone','text');
         $formMapper->add('codePostal','text');
@@ -30,15 +30,14 @@ class UserAdmin extends AbstractAdmin
     }
     protected function configureListFields(ListMapper $listMapper)
     {
+        $listMapper->addIdentifier('id');
         $listMapper->addIdentifier('username');
         $listMapper->addIdentifier('email');
-        $listMapper->addIdentifier('password');
         $listMapper->addIdentifier('adress');
         $listMapper->addIdentifier('phone');
         $listMapper->addIdentifier('codePostal');
         $listMapper->addIdentifier('Ville');
         $listMapper->addIdentifier('numberLicence');
         $listMapper->addIdentifier('dateOfBirth');
-        $listMapper->addIdentifier('id');
     }
 }
