@@ -17,8 +17,8 @@ class ReservationAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('price','text');
-        $formMapper->add('start_date','date');
-        $formMapper->add('end_date','date');
+        $formMapper->add('start_date','date',array('years' => range(2017,date('Y'))));
+        $formMapper->add('end_date','date',array('years' => range(2017,date('Y'))));
     }
 
     protected function configureListFields(ListMapper $listMapper)

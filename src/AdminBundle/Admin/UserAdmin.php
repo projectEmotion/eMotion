@@ -25,7 +25,7 @@ class UserAdmin extends AbstractAdmin
         $formMapper->add('codePostal','text');
         $formMapper->add('Ville','text');
         $formMapper->add('numberLicence','text');
-        $formMapper->add('dateOfBirth','date');
+        $formMapper->add('dateOfBirth','date',array('years' => range(1930,date('Y'))));
 
     }
     protected function configureListFields(ListMapper $listMapper)

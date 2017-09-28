@@ -23,7 +23,7 @@ class VehiculeAdmin extends AbstractAdmin
         $formMapper->add('color','text');
         $formMapper->add('licence_plate','text');
         $formMapper->add('kilometer','text');
-        $formMapper->add('date_of_purchase','datetime');
+        $formMapper->add('date_of_purchase','date',array('years' => range(1980,date('Y'))));
         $formMapper->add('price_of_purchase','text');
         $formMapper->add('availability','checkbox');
         $formMapper->add('vehicle_type',ChoiceType::class, array(

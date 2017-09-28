@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e9a0a9e-f7a7-451d-885f-42bbf0ca6c00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/eMotion.iml" afterPath="$PROJECT_DIR$/.idea/eMotion.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Admin/UserAdmin.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Admin/UserAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +28,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAdmin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/UserAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+            <state relative-caret-position="254">
+              <caret line="27" column="87" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehiculeAdmin.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VehiculeAdmin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="49" column="5" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="172">
+              <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
               <folding>
                 <element signature="e#36#79#0#PHP" expanded="true" />
               </folding>
@@ -53,8 +53,8 @@
       <file leaf-file-name="ReservationAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="315">
+              <caret line="19" column="86" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="86" />
               <folding>
                 <element signature="e#36#79#0#PHP" expanded="true" />
               </folding>
@@ -151,12 +151,12 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Reservation.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Admin/UserAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php" />
       </list>
     </option>
   </component>
@@ -176,11 +176,11 @@
     <dismissed value="$PROJECT_DIR$/web/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-263" />
-    <option name="y" value="36" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -365,18 +365,18 @@
       <workItem from="1506522909095" duration="25000" />
       <workItem from="1506523201995" duration="1037000" />
       <workItem from="1506582531426" duration="1013000" />
-      <workItem from="1506584012160" duration="1914000" />
+      <workItem from="1506584012160" duration="2646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41308000" />
+    <option name="totallyTimeSpent" value="42040000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19742814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40922844" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -682,16 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#36#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Reservation.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
@@ -719,21 +709,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/UserAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="49" column="5" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="254">
+          <caret line="27" column="87" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/ReservationAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="19" column="86" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="86" />
           <folding>
             <element signature="e#36#79#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/UserAdmin.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/VehiculeAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="172">
+          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+          <folding>
+            <element signature="e#36#79#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
