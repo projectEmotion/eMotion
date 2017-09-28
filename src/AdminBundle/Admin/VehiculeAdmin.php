@@ -42,7 +42,7 @@ class VehiculeAdmin extends AbstractAdmin
         $listMapper->addIdentifier('color');
         $listMapper->addIdentifier('licence_plate');
         $listMapper->addIdentifier('kilometer');
-        $listMapper->addIdentifier('date_of_purchase');
+        $listMapper->addIdentifier('date_of_purchase','date');
         $listMapper->addIdentifier('price_of_purchase');
         $listMapper->addIdentifier('availability');
         $listMapper->addIdentifier('vehicle_type');

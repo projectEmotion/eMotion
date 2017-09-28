@@ -17,6 +17,18 @@ class ReservationAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('price','text');
+        $formMapper->add('id_user','entity',array(
+            'class' => 'AppBundle:User',
+            'choice_label' => function ($user) {
+                return $user->getId().' - '.$user->getUsername();
+            }
+        ));
+        $formMapper->add('idVehicle','entity',array(
+            'class' => 'AppBundle:Vehicle',
+            'choice_label' => function ($vehicle) {
+                return $vehicle->getId().' - '.$vehicle->getBrand().' - '.$vehicle->getModel();
+            }
+        ));
         $formMapper->add('start_date','date',array('years' => range(2017,date('Y'))));
         $formMapper->add('end_date','date',array('years' => range(2017,date('Y'))));
     }
@@ -25,7 +37,7 @@ class ReservationAdmin extends AbstractAdmin
     {
         $listMapper->addIdentifier('id');
         $listMapper->addIdentifier('price');
-        $listMapper->addIdentifier('start_date');
-        $listMapper->addIdentifier('end_date');
+        $listMapper->addIdentifier('start_date','date');
+        $listMapper->addIdentifier('end_date','date');
     }
 }
