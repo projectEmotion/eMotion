@@ -1,10 +1,86 @@
 {% trans_default_domain 'FOSUserBundle' %}
+<style>
+    a, a:hover{
 
+        text-decoration: none;
+    }
+    .no-padd{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.part1{
+        height: 540px;
+        text-align: center;
+        background:rgba(255, 255, 255, 0.45);
+        margin-top: 50px;
+    }
+    input{
+        max-width: 290px;
+    }
+    div.title{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        margin-top: 100px;
+    }
+    div.login{
+        margin-top: 40px;
+    }
+    div.btn{
+        border: none;
+        background-color: limegreen;
+        border-radius: 20% / 50%;
+        padding: 20px 40px;
+        color: #fff;
+        font-weight: bold;
+    }
+    div.input-email{
+        margin-bottom: 20px;
+    }
+    div.mot_de_passe{
+        margin-top: 50px;
+    }
+    div.button-connex{
+        margin-top: 40px;
+    }
+    button{
+        text-transform: uppercase;
+        font-weight:700;
+    }
+    div.bg-img{
+        height: 700px;
+        background: orange;
+        background-image: url(img/affiche01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        -webkit-background-size: cover;
+        background-size: cover;
+
+    }
+    input{
+        width: 100%;}
+    div.header{
+        height: 80px;
+        background: rgba(0, 0, 0, 0.36);
+    }
+    div.menu{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 30px;
+    }
+    @media (min-width: 992px) {
+
+        .part-r {
+            margin-top: 147px;;
+        }
+    }
+</style>
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}
     <div>
         <input type="submit" value="{{ 'registration.submit'|trans }}" />
     </div>
 {{ form_end(form) }}
-
-yes
