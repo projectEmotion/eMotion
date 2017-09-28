@@ -21,6 +21,20 @@ AppBundle\Entity\User:
             generator:
                 strategy: IDENTITY
     fields:
+        firstName:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: true
+            column: firstName
+        lastName:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: true
+            column: lastName
         dateOfBirth:
             type: datetime
             nullable: true

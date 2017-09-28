@@ -18,6 +18,16 @@ class User extends BaseUser{
     protected $id;
 
     /**
+     * @ORM\Column(name="firstName", type="string")
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(name="lastName", type="string")
+     */
+    private $lastName;
+
+    /**
      * @ORM\Column(name="date_of_birth", type="datetime")
      */
     private $dateOfBirth;
@@ -198,5 +208,37 @@ class User extends BaseUser{
     public function getVille()
     {
         return $this->ville;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param mixed $firstName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param mixed $lastName
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
     }
 }
