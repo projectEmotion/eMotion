@@ -4,19 +4,133 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form action="{{ path("fos_user_security_check") }}" method="post">
-    {% if csrf_token %}
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-    {% endif %}
 
-    <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
 
-    <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" />
+<style>
+    a, a:hover{
 
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+        text-decoration: none;
+    }
+    .no-padd{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.part1{
+        height: 430px;
+        text-align: center;
+        background:rgba(255, 255, 255, 0.45);
+        margin-top: 50px;
+    }
+    input{
+        max-width: 290px;
+    }
+    div.title{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        margin-top: 100px;
+    }
+    div.login{
+        margin-top: 40px;
+    }
+    div.btn{
+        border: none;
+        background-color: limegreen;
+        border-radius: 20% / 50%;
+        padding: 20px 40px;
+        color: #fff;
+        font-weight: bold;
+    }
+    div.input-email{
+        margin-bottom: 20px;
+    }
+    form input.input-email{
+        margin-bottom: 20px;
+    }
+    div.mot_de_passe{
+        margin-top: 50px;
+    }
+    div.button-connex{
+        margin-top: 40px;
+    }
+    button{
+        text-transform: uppercase;
+        font-weight:700;
+    }
+    div.bg-img{
+        height: 700px;
+        background: orange;
+        background-image: url(img/affiche01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        -webkit-background-size: cover;
+        background-size: cover;
 
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-</form>
+    }
+    input{
+        width: 100%;}
+    div.header{
+        height: 80px;
+        background: rgba(0, 0, 0, 0.36);
+    }
+    div.menu{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 30px;
+    }
+    input#username{
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+<div class="container-fluid no-padd">
+    <div class="bg-img">
+        <div class="header">
+            <div class="container">
+                <div class="menu">eMotion</div>
+                <div class="Links"><a href="home.html">Home</a></div>
+                <div class="container part1 col-md-12">
+                    <div class="">
+                        <div class="title">Connexion</div>
+                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                            {% if csrf_token %}
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                            {% endif %}
+
+
+                        <div class="login">
+                            <div class="input-email">
+                                <label for="username">{{ 'security.login.username'|trans }}</label>
+                                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+                            </div>
+                            <div class="input-pwd col-md-12">
+                                <label for="password">{{ 'security.login.password'|trans }}</label>
+                                <input type="password" id="password" name="_password" required="required" />
+                            </div>
+                        </div>
+                        <div class="mot_de_passe">
+                            <a href="#">Mot de passe oublié ?</a>
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                        </div>
+                        <div class="button-connex">
+                            <div class="btn"><input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" /></div>
+
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid">
+
+</div>
+
+
+</body>
