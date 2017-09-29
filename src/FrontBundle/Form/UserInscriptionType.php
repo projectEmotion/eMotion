@@ -4,23 +4,23 @@ namespace FrontBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\Email;
 class UserInscriptionType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('adress','text');
-        $builder->add('username','text');
-        $builder->add('firstName','text');
+        $builder->add('username','text',array('required' => true,'constraints'=>array(new Length(array('min' => 3)))));
+        $builder->add('firstName','text',array('required' => true,'constraints'=>array(new Length(array('min' => 2)))));
         $builder->add('lastName','text');
-        $builder->add('email','text');
+        $builder->add('email','text',array('required' => true,'constraints'=>array(new Email())));
         $builder->add('plainPassword','text');
-            $builder->add('dateOfBirth','date');
+        $builder->add('dateOfBirth','date');
         $builder->add('phone','text');
         $builder->add('codePostal','text');
         $builder->add('ville','text');
         $builder->add('numberLicence','text');
-
     }
 
     public function getParent()
