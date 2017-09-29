@@ -45,7 +45,7 @@ class UserAdmin extends AbstractAdmin
     
     public function preValidate($user){
         $form = $this->getForm();
-       if(count( $user->getCodePostal() ) != 6){
+       if(count( $user->getCodePostal() ) != 5){
            $form->addError(new FormError('Post Code Must Be 5'));
        }
     }
