@@ -30,7 +30,7 @@ class ReservationAdmin extends AbstractAdmin
             }
         ));
         $formMapper->add('start_date','date',array('years' => range(2017,date('Y'))));
-        $formMapper->add('end_date','date',array('years' => range(2017,date('Y'))));
+        $formMapper->add('end_date','date',array('years' => range(2018,date('Y'))));
     }
 
     protected function configureListFields(ListMapper $listMapper)
