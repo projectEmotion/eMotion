@@ -6,13 +6,15 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use AppBundle\Entity\User;
+use Symfony\Component\Form\FormError;
 
 class UserAdmin extends AbstractAdmin
 {
     public function toString($object)
     {
         return $object instanceof User
-            ? $object->getTitle()
+            ? $object->getUsername()
             : 'User'; // shown in the breadcrumb on the create view
     }
     protected function configureFormFields(FormMapper $formMapper)
@@ -39,5 +41,12 @@ class UserAdmin extends AbstractAdmin
         $listMapper->addIdentifier('Ville');
         $listMapper->addIdentifier('numberLicence');
         $listMapper->addIdentifier('dateOfBirth');
+    }
+    
+    public function preValidate($user){
+        $form = $this->getForm();
+       if(count( $user->getCodePostal() ) != 6){
+           $form->addError(new FormError('Post Code Must Be 6'));
+       }
     }
 }
