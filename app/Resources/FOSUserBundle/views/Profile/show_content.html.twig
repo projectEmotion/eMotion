@@ -1,6 +1,156 @@
 {% trans_default_domain 'FOSUserBundle' %}
+<style>
+    a, a:hover{
 
+        text-decoration: none;
+    }
+    .no-padd{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.part1{
+        height: 540px;
+        text-align: center;
+        background:rgba(255, 255, 255, 0.45);
+        margin-top: 50px;
+    }
+    input.bouton{
+        max-width: 290px;
+        border:none;
+        background:transparent;
+    }
+    div.title{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        margin-top: 100px;
+    }
+    div.login{
+        margin-top: 40px;
+    }
+    div.btn{
+        border: none;
+        background-color: limegreen;
+        border-radius: 20% / 50%;
+        padding: 20px 40px;
+        color: #fff;
+        font-weight: bold;
+    }
+    div.input-email{
+        margin-bottom: 20px;
+    }
+    div.mot_de_passe{
+        margin-top: 50px;
+    }
+    div.button-connex{
+        margin-top: 40px;
+    }
+    button{
+        text-transform: uppercase;
+        font-weight:700;
+    }
+    div.bg-img{
+        height: 700px;
+        background: orange;
+        background-image: url(img/affiche01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        -webkit-background-size: cover;
+        background-size: cover;
+
+    }
+    input{
+        width: 100%;}
+    div.header{
+        height: 80px;
+        background: rgba(0, 0, 0, 0.36);
+    }
+    div.menu{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 30px;
+    }
+    @media (min-width: 992px) {
+
+        .part-r {
+            margin-top: 147px;;
+        }
+    }
+</style>
 <div class="fos_user_user_show">
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
+
+
+<div class="container-fluid no-padd">
+    <div class="bg-img">
+        <div class="header">
+            <div class="container">
+                <div class="menu">eMotion</div>
+                <div class="Links"><a href="home.html">Home</a></div>
+                <div class="container part1 col-md-12">
+                    <div class="col-md-6">
+                        <div class="title">Mon Profil</div>
+                        <div class="login">
+                            <div class="input-email">
+
+                                <p>Username: {{ user.username }}</p>
+                            </div>
+                            <div class="input-email">
+
+                                <p>Prénom: {{ user.firstName }}</p>
+                            </div>
+                            <div class="input-email">
+
+                                <p>Nom: {{ user.lastName }}</p>
+                            </div>
+
+                            <div class="input-email">
+                                <p>E-mail: {{ user.email }}</p>
+
+                            </div>
+                            <div class="input-pwd col-md-12">
+                                <p>Numéro de permis: {{ user.numberLicence }}</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6 part-r">
+
+                        <div class="login">
+
+                            <div class="input-email">
+                                <p>Adresse: {{ user.adress }}</p>
+                                <p>Code Postal: {{ user.codePostal }}</p>
+                                <p>Ville: {{ user.ville }}</p>
+                            </div>
+                            <div class="input-email">
+                                <p>Téléphone: {{ user.phone }}</p>
+                            </div>
+                            <div class="input-email">
+                                <p>Date de naissance: {{ user.dateOfBirth | date }}</p>
+                            </div>
+                            <div class="input-pwd col-md-12">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid">
+
+</div>
+

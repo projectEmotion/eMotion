@@ -4,8 +4,6 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-
-
 <style>
     a, a:hover{
 
@@ -66,7 +64,6 @@
         position: relative;
         -webkit-background-size: cover;
         background-size: cover;
-
     }
     input{
         width: 100%;}
@@ -100,8 +97,6 @@
                             {% if csrf_token %}
                                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
                             {% endif %}
-
-
                         <div class="login">
                             <div class="input-email">
                                 <label for="username">{{ 'security.login.username'|trans }}</label>
@@ -119,7 +114,6 @@
                         </div>
                         <div class="button-connex">
                             <div class="btn"><input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" /></div>
-
                         </div>
                         </form>
                     </div>

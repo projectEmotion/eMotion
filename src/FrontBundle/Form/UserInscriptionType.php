@@ -15,7 +15,7 @@ class UserInscriptionType extends AbstractType
         $builder->add('lastName','text');
         $builder->add('email','text');
         $builder->add('plainPassword','text');
-        $builder->add('dateOfBirth','date');
+            $builder->add('dateOfBirth','date');
         $builder->add('phone','text');
         $builder->add('codePostal','text');
         $builder->add('ville','text');
