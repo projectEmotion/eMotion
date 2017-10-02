@@ -30,8 +30,6 @@ class AppKernel extends Kernel
             new AdminBundle\AdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new FrontBundle\FrontBundle(),
-
-            new Aimeos\ShopBundle\AimeosShopBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
