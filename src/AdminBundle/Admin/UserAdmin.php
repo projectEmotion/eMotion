@@ -19,7 +19,6 @@ class UserAdmin extends AbstractAdmin
     }
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $currentDateYear = date('Y');
         $formMapper->add('username','text');
         $formMapper->add('email','text');
         //$formMapper->add('password','text');
@@ -28,7 +27,7 @@ class UserAdmin extends AbstractAdmin
         $formMapper->add('codePostal','text');
         $formMapper->add('Ville','text');
         $formMapper->add('numberLicence','text');
-        $formMapper->add('dateOfBirth','date',array('years' => range($currentDateYear - 85 ,date('Y'))));
+        $formMapper->add('dateOfBirth','date', array('years' => range(date('Y'), date('Y')+100)));
 
     }
     protected function configureListFields(ListMapper $listMapper)

@@ -10,14 +10,13 @@ class UserInscriptionType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $currentDate = date('Y');
         $builder->add('adress','text');
         $builder->add('username','text',array('required' => true,'constraints'=>array(new Length(array('min' => 3)))));
         $builder->add('firstName','text',array('required' => true,'constraints'=>array(new Length(array('min' => 2)))));
-        $builder->add('lastName','text',array('required' => true,'constraints'=>array(new Length(array('min' => 2)))));
+        $builder->add('lastName','text');
         $builder->add('email','text',array('required' => true,'constraints'=>array(new Email())));
         $builder->add('plainPassword','text');
-        $builder->add('dateOfBirth','date',array('years' => range($currentDate - 100 ,date('Y'))));
+        $builder->add('dateOfBirth','date');
         $builder->add('phone','text');
         $builder->add('codePostal','text');
         $builder->add('ville','text');
