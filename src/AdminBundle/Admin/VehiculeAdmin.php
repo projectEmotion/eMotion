@@ -6,6 +6,8 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
 
 class VehiculeAdmin extends AbstractAdmin
 {
@@ -17,12 +19,12 @@ class VehiculeAdmin extends AbstractAdmin
     }
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('brand','text');
-        $formMapper->add('model','text');
-        $formMapper->add('serial_number','text');
-        $formMapper->add('color','text');
-        $formMapper->add('licence_plate','text');
-        $formMapper->add('kilometer','text');
+        $formMapper->add('brand',TextType::class);
+        $formMapper->add('model',TextType::class);
+        $formMapper->add('serial_number',TextType::class);
+        $formMapper->add('color',TextType::class);
+        $formMapper->add('licence_plate',TextType::class);
+        $formMapper->add('kilometer',TextType::class);
         $formMapper->add('date_of_purchase','date',array('years' => range(1980,date('Y'))));
         $formMapper->add('price_of_purchase','text');
         $formMapper->add('availability','checkbox');

@@ -8,6 +8,9 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use AppBundle\Entity\User;
 use Symfony\Component\Form\FormError;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+
 
 class UserAdmin extends AbstractAdmin
 {
@@ -17,17 +20,18 @@ class UserAdmin extends AbstractAdmin
             ? $object->getUsername()
             : 'User'; // shown in the breadcrumb on the create view
     }
+
     protected function configureFormFields(FormMapper $formMapper)
     {
         $currentDateYear = date('Y');
-        $formMapper->add('username','text');
-        $formMapper->add('email','text');
-        //$formMapper->add('password','text');
-        $formMapper->add('adress','text');
-        $formMapper->add('phone','text');
-        $formMapper->add('codePostal','text');
-        $formMapper->add('Ville','text');
-        $formMapper->add('numberLicence','text');
+        $formMapper->add('username',TextType::class);
+        $formMapper->add('email',EmailType::class);
+        $formMapper->add('password',TextType::class);
+        $formMapper->add('adress',TextType::class);
+        $formMapper->add('phone',TextType::class);
+        $formMapper->add('codePostal',TextType::class);
+        $formMapper->add('Ville',TextType::class);
+        $formMapper->add('numberLicence',TextType::class);
         $formMapper->add('dateOfBirth','date',array('years' => range($currentDateYear - 85 ,date('Y'))));
 
     }
