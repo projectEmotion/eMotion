@@ -29,8 +29,9 @@ class ReservationAdmin extends AbstractAdmin
                 return $vehicle->getId().' - '.$vehicle->getBrand().' - '.$vehicle->getModel();
             }
         ));
-        $formMapper->add('start_date','date',array('years' => range(2017,date('Y'))));
-        $formMapper->add('end_date','date',array('years' => range(2018,date('Y'))));
+        $currentDateYear = date('Y');
+        $formMapper->add('start_date','date',array('years' => range($currentDateYear,date('Y'))));
+        $formMapper->add('end_date','date',array('years' => range($currentDateYear + 1,date('Y'))));
     }
 
     protected function configureListFields(ListMapper $listMapper)
