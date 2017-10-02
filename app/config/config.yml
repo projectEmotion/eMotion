@@ -80,7 +80,8 @@ swiftmailer:
 fos_user:
     db_driver: orm #other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
-    user_class: AppBundle\Entity\User
+    user_class: Aimeos\ShopBundle\Entity\FosUser
+    firewall_name: aimeos_myaccount
     from_email:
         address: "noreply@example.com"
         sender_name: "Demo App"
@@ -94,3 +95,11 @@ sonata_block:
         # enable the SonataAdminBundle block
         sonata.admin.block.admin_list:
             contexts: [admin]
+
+aimeos_shop:
+    mshop:
+        customer:
+            manager:
+                name: FosUser
+                password:
+                    name: Bcrypt

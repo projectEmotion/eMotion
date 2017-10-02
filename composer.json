@@ -29,12 +29,15 @@
         "symfony/polyfill-apcu": "^1.0",
         "symfony/swiftmailer-bundle": "^2.3.10",
         "symfony/symfony": "3.3.*",
-        "twig/twig": "^1.0||^2.0"
+        "twig/twig": "^1.0||^2.0",
+        "aimeos/aimeos-symfony": "~2017.04"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -49,7 +52,20 @@
         ],
         "post-update-cmd": [
             "@symfony-scripts"
+        ],
+        "post-install-cmd": [
+            "Aimeos\\ShopBundle\\Composer\\ScriptHandler::installBundle",
+            "Aimeos\\ShopBundle\\Composer\\ScriptHandler::updateConfig",
+            "Aimeos\\ShopBundle\\Composer\\ScriptHandler::setupDatabase"
+
+        ],
+        "post-update-cmd": [
+            "Aimeos\\ShopBundle\\Composer\\ScriptHandler::installBundle",
+            "Aimeos\\ShopBundle\\Composer\\ScriptHandler::updateConfig",
+            "Aimeos\\ShopBundle\\Composer\\ScriptHandler::setupDatabase"
+
         ]
+
     },
     "config": {
         "platform": {
