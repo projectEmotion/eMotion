@@ -1,30 +1,37 @@
 security:
     providers:
-        aimeos:
-            entity: { class: AimeosShopBundle:FosUser, property: username }
-
+        admin:
+            memory:
+                users:
+                    admin: { password: secret, roles: [ 'ROLE_ADMIN' ] }
+        aimeos_customer:
+            entity: { class: AimeosShopBundle:User, property: username }
+        in_memory:
+            memory: ~
+ 
     encoders:
-        Aimeos\ShopBundle\Entity\FosUser: bcrypt
-
+        Symfony\Component\Security\Core\User\User: plaintext
+        Aimeos\ShopBundle\Entity\User:
+            algorithm: sha1
+            encode_as_base64: false
+            iterations: 1
+ 
     firewalls:
         aimeos_admin:
             pattern:   ^/admin
             anonymous: ~
-            provider: aimeos
+            provider: admin
             form_login:
                 login_path: /admin
                 check_path: /admin_check
         aimeos_myaccount:
-            pattern: ^/
-            form_login:
-                provider: aimeos
-                csrf_token_generator: security.csrf.token_manager
-            logout:       true
-            anonymous:    true
-
+            pattern: ^/myaccount
+            provider: aimeos_customer
+            http_basic:
+                realm: "MyAccount"
+        main:
+            anonymous: ~
+ 
     access_control:
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/myaccount, roles: ROLE_USER }
         - { path: ^/admin/.+, roles: ROLE_ADMIN }
+        - { path: ^/myaccount, roles: ROLE_USER }
