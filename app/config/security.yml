@@ -15,7 +15,7 @@ security:
                 login_path: /admin
                 check_path: /admin_check
         aimeos_myaccount:
-            pattern: ^/myaccount
+            pattern: ^/
             form_login:
                 provider: aimeos
                 csrf_token_generator: security.csrf.token_manager
