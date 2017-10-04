@@ -67,6 +67,7 @@ doctrine:
             default:
                 mappings:
                     AppBundle:  ~
+                    AimeosShopBundle:  ~
                 
         
 # Swiftmailer Configuration
@@ -79,7 +80,6 @@ swiftmailer:
 
 fos_user:
     db_driver: orm #other valid values are 'mongodb' and 'couchdb'
-    firewall_name: main
     user_class: Aimeos\ShopBundle\Entity\FosUser
     firewall_name: aimeos_myaccount
     from_email:
