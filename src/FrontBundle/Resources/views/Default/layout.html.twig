@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>{% block title %}eMotion | Location de vehicule{% endblock %}</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+
+    {% block stylesheets %}
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="{{ asset('assets/plugins/line-icons/line-icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/flexslider/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/layer-slider/layerslider/css/layerslider.css')  }}">
+
+        <!-- CSS Theme -->
+        <link rel="stylesheet" href="{{ asset('assets/css/theme-colors/default.css') }}">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    {% endblock %}
+</head>
+
+<body>
+{% block body %}
+    <div class="wrapper">
+        <!--=== Header ===-->
+        <div class="header">
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container">
+                    <!-- Topbar Navigation -->
+                    <ul class="loginbar pull-right">
+                        <li class="languagesSelector">
+                            <i class="fa fa-globe"></i>
+                            <a>Languages</a>
+                            <ul class="languages">
+                                <li class="active">
+                                    <a href="#">English <i class="fa fa-check"></i></a>
+                                </li>
+                                <li><a href="#">Spanish</a></li>
+                                <li><a href="#">Russian</a></li>
+                                <li><a href="#">German</a></li>
+                            </ul>
+                        </li>
+                        <li class="topbar-devider"></li>
+                        <li><a href="registration">INSCRIPTION</a></li>
+                        <li class="topbar-devider"></li>
+                        <li><a href="login">CONNEXION</a></li>
+                    </ul>
+                    <!-- End Topbar Navigation -->
+                </div>
+            </div>
+            <!-- End Topbar -->
+
+            <!-- Navbar -->
+            <div class="navbar navbar-default mega-menu" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-bars"></span>
+                        </button>
+                        <a class="navbar-brand" href="home">
+                            <img id="logo-header" src="{{ asset('assets/img/emotion.jpg') }}" alt="Logo">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-responsive-collapse">
+                        <ul class="nav navbar-nav">
+
+                            <!-- Location -->
+                            <li>
+                                <a href="#">
+                                    Location de vehicule
+                                </a>
+                            </li>
+                            <!-- End Location -->
+
+                            <!-- Aide -->
+                            <li class="dropdown">
+                                <a href="javascript:void(0);">Aide</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"> La F.A.Q</a></li>
+                                    <li><a href="#"> Mode d'emploi</a></li>
+                                    <li><a href="#"> Les régles </a></li>
+                                </ul>
+                            </li>
+                            <!-- End Aide -->
+                        </ul>
+                    </div><!--/navbar-collapse-->
+                </div>
+            </div>
+            <!-- End Navbar -->
+        </div>
+        <!--=== End Header ===-->
+
+        <!--=== Slider ===-->
+        <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
+            <!-- First slide -->
+            <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
+                <img src="{{ asset('assets/img/sliders/layer/bg3.jpg') }}" class="ls-bg" alt="Slide background"/>
+
+                <!-- <img class="ls-l" src="assets/img/mockup/iphone1.png" style="top: 85%; left: 44%;"
+                data-ls="offsetxin:left; durationin:1500; delayin:900; fadein:false; offsetxout:left; durationout:1000; fadeout:false;" />
+
+                <img src="assets/img/mockup/iphone.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;"
+                data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
+
+                <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
+                    Fully Responsive <br> Bootstrap 3 Template
+                </span>
+
+                <a class="btn-u btn-u-orange ls-s-1" href="#" style=" padding: 9px 20px; font-size:25px; top:340px; left: 590px; slidedirection : bottom; slideoutdirection : top; durationin : 3500; durationout : 2500; delayin : 1000; ">
+                    Download Now
+                </a>-->
+            </div>
+
+        </div><!--/layer_slider-->
+        <!--=== End Slider ===-->
+
+        <!--=== Content Part ===-->
+        <div class="container content">
+            <div class="margin-bottom-10"></div>
+
+            <!-- Our Clients -->
+            <div id="clients-flexslider" class="flexslider home clients">
+                <div class="headline"><h2>Our Clients</h2></div>
+                <ul class="slides">
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/hp_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/hp.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/igneus_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/igneus.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/vadafone_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/vadafone.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/walmart_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/walmart.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/shell_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/shell.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/natural_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/natural.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/aztec_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/aztec.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/gamescast_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/gamescast.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/cisco_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/cisco.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/everyday_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/everyday.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/cocacola_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/cocacola.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/spinworkx_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/spinworkx.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/shell_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/shell.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/natural_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/natural.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/gamescast_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/gamescast.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/everyday_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/everyday.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/clients/spinworkx_grey.png') }}" alt="">
+                            <img src="{{ asset('assets/img/clients/spinworkx.png') }}" class="color-img" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/flexslider-->
+            <!-- End Our Clients -->
+        </div><!--/container-->
+        <!-- End Content Part -->
+
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1">
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- About -->
+                        <div class="col-md-3 md-margin-bottom-40">
+                            <a href="index.html"><img id="logo-footer" class="footer-logo" src="{{ asset('assets/img/logo2-default.png') }}" alt=""></a>
+                            <p>Bienvenue sur le service de recherche de location de voiture proposé par eMotion. Nous offrons des milliers d'offres de location de voiture pour vous aider à trouver le meilleur prix.</p>
+                            <p>Ainsi,nous vous aidons à organiser votre voyage et vous économisez de l’argent. Prenez la route avec nous.</p>
+                        </div><!--/col-md-3-->
+                        <!-- End About -->
+
+
+                        <!-- Latest -->
+                        <div class="col-md-3 md-margin-bottom-40">
+                            <div class="posts">
+
+                            </div>
+                        </div>
+                        <!-- End Latest -->
+
+                        <!-- Link List -->
+                        <div class="col-md-3 md-margin-bottom-40">
+                            <div class="headline"><h2>Liens</h2></div>
+                            <ul class="list-unstyled link-list">
+                                <li><a href="#">Blog</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">Régles</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">Recrutement</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">Contactez nous</a><i class="fa fa-angle-right"></i></li>
+                            </ul>
+                        </div><!--/col-md-3-->
+                        <!-- End Link List -->
+
+                        <!-- Address -->
+                        <div class="col-md-3 map-img md-margin-bottom-40">
+                            <div class="headline"><h2>Contactez-nous</h2></div>
+                            <address class="md-margin-bottom-40">
+                                25, Rue d'amiens <br/>
+                                Paris, France <br/>
+                                Téléphone: 09 47 51 25 36 <br/>
+                                Email: <a href="mailto:contact@emotion.fr" class="">contact@emotion.fr</a>
+                            </address>
+                        </div><!--/col-md-3-->
+                        <!-- End Address -->
+                    </div>
+                </div>
+            </div><!--/footer-->
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                2017 &copy; All Rights Reserved.
+                                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                            </p>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="col-md-6">
+                            <ul class="footer-socials list-inline">
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                        <i class="fa fa-skype"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social Links -->
+                    </div>
+                </div>
+            </div><!--/copyright-->
+        </div>
+        <!--=== End Footer Version 1 ===-->
+    </div><!--/wrapper-->
+{% endblock %}
+{% block javascripts %}
+
+    <!-- JS Global Compulsory -->
+    <script  src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- JS Implementing Plugins -->
+    <script  src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/flexslider/jquery.flexslider-min.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/greensock.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js') }}"></script>
+    <script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js') }}"></script>
+    <!-- JS Customization -->
+    <script  src="{{ asset('assets/js/custom.js') }}"></script>
+    <!-- JS Page Level -->
+    <script  src="{{ asset('assets/js/app.js') }}"></script>
+    <script  src="{{ asset('assets/js/plugins/layer-slider.js') }}"></script>
+    <script  src="{{ asset('assets/js/plugins/owl-recent-works.js') }}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+            App.initSliders();
+            LayerSlider.initLayerSlider();
+            OwlRecentWorks.initOwlRecentWorksV2();
+        });
+    </script>
+{% endblock %}
+<!--[if lt IE 9]>
+<script src="{{ asset('assets/plugins/respond.js') }}"></script>
+<script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
+<script src="{{asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
+<![endif]-->
+
+</body>
+</html>
