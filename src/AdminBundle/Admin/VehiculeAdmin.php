@@ -32,6 +32,7 @@ class VehiculeAdmin extends AbstractAdmin
                 'Voiture' => false,
             ),
         ));
+        $formMapper->add('link','url');
     }
     
     protected function configureListFields(ListMapper $listMapper)
@@ -46,6 +47,7 @@ class VehiculeAdmin extends AbstractAdmin
         $listMapper->addIdentifier('price_of_purchase');
         $listMapper->addIdentifier('availability');
         $listMapper->addIdentifier('vehicle_type');
+        $listMapper->addIdentifier('link');
         $listMapper->addIdentifier('id');
     }
 }
