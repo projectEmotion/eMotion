@@ -91,7 +91,12 @@ class Vehicle
      */
     private $vehicleType;
 
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
+     */
+     private $link;
 
     /**
      * Get id
@@ -342,4 +347,28 @@ class Vehicle
     {
         return $this->vehicleType;
     }
+
+      /**
+     * Set link
+     *
+     * @param string $link
+     *
+     * @return Vehicle
+     */
+     public function setLink($link)
+     {
+         $this->link = $link;
+ 
+         return $this;
+     }
+ 
+     /**
+      * Get link
+      *
+      * @return string
+      */
+     public function getLink()
+     {
+         return $this->link;
+     }
 }

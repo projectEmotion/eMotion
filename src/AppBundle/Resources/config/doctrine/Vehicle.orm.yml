@@ -65,4 +65,11 @@ AppBundle\Entity\Vehicle:
             type: boolean
             nullable: true
             column: vehicle_type
+        link:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: Link
     lifecycleCallbacks: {  }
