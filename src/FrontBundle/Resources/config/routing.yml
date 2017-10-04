@@ -4,3 +4,11 @@ front_homepage:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    
+login_page:
+    path: /login
+    defaults: { _controller: FrontBundle:Default:login }
+    
+register_page:
+    path: /registration
+    defaults: { _controller: FrontBundle:Default:registration}

@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>eMotion | Location de vehicule</title>
+    <title>{% block title %}eMotion | Location de vehicule{% endblock %}</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -14,25 +14,28 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
 
+    {% block stylesheets %}
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/line-icons/line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/flexslider/flexslider.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/layer-slider/layerslider/css/layerslider.css') }}">
 
     <!-- CSS Theme -->    
-    <link rel="stylesheet" href="assets/css/theme-colors/default.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/theme-colors/default.css') }}">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+     {% endblock %}
 </head>	
 
 <body>
+     {% block body %}
 <div class="wrapper">    
     <!--=== Header ===-->    
     <div class="header">
@@ -73,7 +76,7 @@
                         <span class="fa fa-bars"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img id="logo-header" src="assets/img/emotion.jpg" alt="Logo">
+                        <img id="logo-header" src="{{ asset('assets/img/emotion.jpg') }}" alt="Logo">
                     </a>
                 </div>
 
@@ -203,7 +206,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="{{ asset('assets/img/logo2-default.png') }}" alt=""></a>
                         <p>Bienvenue sur le service de recherche de location de voiture proposé par eMotion. Nous offrons des milliers d'offres de location de voiture et moto électrique pour vous aider à trouver le meilleur prix.</p>
                         <p>Ainsi,nous vous aidons à organiser votre voyage et vous économisez de l’argent. Prenez la route avec nous.</p>    
                     </div><!--/col-md-3-->
@@ -303,24 +306,27 @@
     </div>     
     <!--=== End Footer Version 1 ===-->
 </div><!--/wrapper-->
+    
+{% endblock %}
+    {% block javascripts %}
 
 <!-- JS Global Compulsory -->			
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<script  src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+<script  src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
+<script  src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script> 
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<script  src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
+<script  src="{{ asset('assets/plugins/flexslider/jquery.flexslider-min.js') }}"></script>
+<script  src="{{ asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.js') }}"></script>
+<script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/greensock.js') }}"></script>
+<script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js') }}"></script>
+<script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js') }}"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script  src="{{ asset('assets/js/custom.js') }}"></script>
 <!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/plugins/layer-slider.js"></script>
-<script type="text/javascript" src="assets/js/plugins/owl-recent-works.js"></script>
+<script  src="{{ asset('assets/js/app.js') }}"></script>
+<script  src="{{ asset('assets/js/plugins/layer-slider.js') }}"></script>
+<script  src="{{ asset('assets/js/plugins/owl-recent-works.js') }}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
@@ -328,13 +334,12 @@
         LayerSlider.initLayerSlider();   
         OwlRecentWorks.initOwlRecentWorksV2();
     });
-		
 </script>
-
+    {% endblock %}
 <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
+    <script src="{{ asset('assets/plugins/respond.js') }}"></script>
+    <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
+    <script src="{{asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
 <![endif]-->
 
 </body>
