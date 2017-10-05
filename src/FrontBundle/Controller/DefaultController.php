@@ -35,4 +35,9 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:registration.html.twig');
     }
+    
+    public function bookingAction()
+    {
+        return $this->render('FrontBundle:Default:booking.html.twig');
+    }
 }

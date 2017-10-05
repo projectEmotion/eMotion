@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
+
 <div class="wrapper">    
     <!--=== Header ===-->    
     <div class="header">
@@ -22,9 +24,9 @@
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>   
-                    <li><a href="registration">INSCRIPTION</a></li>  
-                    <li class="topbar-devider"></li>
-                    <li><a href="login">CONNEXION</a></li>   
+                    <li><a href="inscription.html">INSCRIPTION</a></li>  
+                    <li class="topbar-devider"></li>   
+                    <li><a href="login.html">CONNEXION</a></li>   
                 </ul>
                 <!-- End Topbar Navigation -->
             </div>
@@ -40,8 +42,8 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="home">
-                        <img id="logo-header" src="{{ asset('assets/img/emotion.jpg') }}" alt="Logo">
+                    <a class="navbar-brand" href="index.html">
+                        <img id="logo-header" src="assets/img/emotion.jpg" alt="Logo">
                     </a>
                 </div>
 
@@ -73,147 +75,174 @@
         </div>            
         <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->
+    <!--=== End Header ===-->    
 
-    <!--=== Slider ===-->
-    <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
-        <!-- First slide -->
-        <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
-            <img src="{{ asset('assets/img/sliders/layer/bg3.jpg') }}" class="ls-bg" alt="Slide background"/>
-
-            <!-- <img class="ls-l" src="assets/img/mockup/iphone1.png" style="top: 85%; left: 44%;" 
-            data-ls="offsetxin:left; durationin:1500; delayin:900; fadein:false; offsetxout:left; durationout:1000; fadeout:false;" />
-            
-            <img src="assets/img/mockup/iphone.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;" 
-            data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
-        
-            <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
-                Fully Responsive <br> Bootstrap 3 Template
-            </span> 
-
-            <a class="btn-u btn-u-orange ls-s-1" href="#" style=" padding: 9px 20px; font-size:25px; top:340px; left: 590px; slidedirection : bottom; slideoutdirection : top; durationin : 3500; durationout : 2500; delayin : 1000; ">
-                Download Now
-            </a>-->
-        </div>
-           
-    </div><!--/layer_slider-->
-    <!--=== End Slider ===-->
+	<!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Reservation</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li class="active">Reservation</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
     <div class="container content">
-        <div class="margin-bottom-10"></div>
-    
-    	<!-- Our Clients -->
-        <div id="clients-flexslider" class="flexslider home clients">
-            <div class="headline"><h2>Our Clients</h2></div>    
-            <ul class="slides">
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/hp_grey.png') }}" alt="">
-                        <img src="{{ asset('assets/img/clients/hp.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/igneus_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/igneus.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/vadafone_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/vadafone.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/walmart_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/walmart.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/shell_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/shell.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/natural_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/natural.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/aztec_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/aztec.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/gamescast_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/gamescast.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/cisco_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/cisco.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/everyday_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/everyday.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/cocacola_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/cocacola.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/spinworkx_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/spinworkx.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/shell_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/shell.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/natural_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/natural.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/gamescast_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/gamescast.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/everyday_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/everyday.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ asset('assets/img/clients/spinworkx_grey.png') }}" alt=""> 
-                        <img src="{{ asset('assets/img/clients/spinworkx.png') }}" class="color-img" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div><!--/flexslider-->
-        <!-- End Our Clients -->    
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <form class="reg-page">
+                 <div class="form-group">
+                    <label>Type de vehicule</label>
+                    <select class="form-control" id="vehicl_type" >
+                     <option value="0" selected>Voiture</option>
+                     <option value="1"> Scooter</option>
+                 </select>
+				 </div>
+                                      
+						<div class="form-group">			  
+                    <label>Marque</label>
+                    <input type="text" class="form-control margin-bottom-20">
+						</div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Date de prise en charge</label>
+                            <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
+                        </div>
+						
+                        <div class="col-sm-6">
+                            <label>Heure</label> </br>
+                            <select style="height:35px;">										
+											<option  value="00:00">00:00</option>										
+											<option  value="00:30">00:30</option>										
+											<option  value="01:00">01:00</option>										
+											<option  value="01:30">01:30</option>										
+											<option  value="02:00">02:00</option>										
+											<option  value="02:30">02:30</option>										
+											<option  value="03:00">03:00</option>										
+											<option  value="03:30">03:30</option>										
+											<option  value="04:00">04:00</option>										
+											<option  value="04:30">04:30</option>										
+											<option  value="05:00">05:00</option>										
+											<option  value="05:30">05:30</option>										
+											<option  value="06:00">06:00</option>										
+											<option  value="06:30">06:30</option>										
+											<option  value="07:00">07:00</option>										
+											<option  value="07:30">07:30</option>										
+											<option  value="08:00">08:00</option>										
+											<option  value="08:30">08:30</option>										
+											<option  value="09:00">09:00</option>										
+											<option  value="09:30">09:30</option>										
+											<option selected value="10:00">10:00</option>
+											<option  value="10:30">10:30</option>										
+											<option  value="11:00">11:00</option>										
+											<option  value="11:30">11:30</option>
+											<option  value="12:00">12:00</option>
+											<option  value="12:30">12:30</option>
+											<option  value="13:00">13:00</option>
+											<option  value="13:30">13:30</option>
+											<option  value="14:00">14:00</option>
+											<option  value="14:30">14:30</option>
+											<option  value="15:00">15:00</option>
+											<option  value="15:30">15:30</option>
+											<option  value="16:00">16:00</option>
+											<option  value="16:30">16:30</option>
+											<option  value="17:00">17:00</option>
+											<option  value="17:30">17:30</option>
+											<option  value="18:00">18:00</option>
+											<option  value="18:30">18:30</option>
+											<option  value="19:00">19:00</option>
+											<option  value="19:30">19:30</option>
+											<option  value="20:00">20:00</option>
+											<option  value="20:30">20:30</option>
+											<option  value="21:00">21:00</option>
+											<option  value="21:30">21:30</option>
+											<option  value="22:00">22:00</option>
+											<option  value="22:30">22:30</option>
+											<option  value="23:00">23:00</option>
+											<option  value="23:30">23:30</option>
+									</select>
+
+                        </div>
+                    </div>
+					</br>
+					<div class="row">
+                        <div class="col-sm-6">
+                            <label>Date de restitution</label>
+                            <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Heure</label> </br>
+                            <select style="height:35px;">										
+											<option  value="00:00">00:00</option>										
+											<option  value="00:30">00:30</option>										
+											<option  value="01:00">01:00</option>										
+											<option  value="01:30">01:30</option>										
+											<option  value="02:00">02:00</option>										
+											<option  value="02:30">02:30</option>										
+											<option  value="03:00">03:00</option>										
+											<option  value="03:30">03:30</option>										
+											<option  value="04:00">04:00</option>										
+											<option  value="04:30">04:30</option>										
+											<option  value="05:00">05:00</option>										
+											<option  value="05:30">05:30</option>										
+											<option  value="06:00">06:00</option>										
+											<option  value="06:30">06:30</option>										
+											<option  value="07:00">07:00</option>										
+											<option  value="07:30">07:30</option>										
+											<option  value="08:00">08:00</option>										
+											<option  value="08:30">08:30</option>										
+											<option  value="09:00">09:00</option>										
+											<option  value="09:30">09:30</option>										
+											<option selected value="10:00">10:00</option>
+											<option  value="10:30">10:30</option>										
+											<option  value="11:00">11:00</option>										
+											<option  value="11:30">11:30</option>
+											<option  value="12:00">12:00</option>
+											<option  value="12:30">12:30</option>
+											<option  value="13:00">13:00</option>
+											<option  value="13:30">13:30</option>
+											<option  value="14:00">14:00</option>
+											<option  value="14:30">14:30</option>
+											<option  value="15:00">15:00</option>
+											<option  value="15:30">15:30</option>
+											<option  value="16:00">16:00</option>
+											<option  value="16:30">16:30</option>
+											<option  value="17:00">17:00</option>
+											<option  value="17:30">17:30</option>
+											<option  value="18:00">18:00</option>
+											<option  value="18:30">18:30</option>
+											<option  value="19:00">19:00</option>
+											<option  value="19:30">19:30</option>
+											<option  value="20:00">20:00</option>
+											<option  value="20:30">20:30</option>
+											<option  value="21:00">21:00</option>
+											<option  value="21:30">21:30</option>
+											<option  value="22:00">22:00</option>
+											<option  value="22:30">22:30</option>
+											<option  value="23:00">23:00</option>
+											<option  value="23:30">23:30</option>
+									</select>
+
+                        </div>
+                    </div>
+					
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <button class="btn-u" type="submit">Reserver</button>                        
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div><!--/container-->		
-    <!-- End Content Part -->
+    <!--=== End Content Part ===-->
 
     <!--=== Footer Version 1 ===-->
     <div class="footer-v1">
@@ -222,8 +251,8 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="{{ asset('assets/img/logo2-default.png') }}" alt=""></a>
-                        <p>Bienvenue sur le service de recherche de location de voiture proposé par eMotion. Nous offrons des milliers d'offres de location de voiture pour vous aider à trouver le meilleur prix.</p>
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
+                        <p>Bienvenue sur le service de recherche de location de voiture proposé par eMotion. Nous offrons des milliers d'offres de location de voiture et moto électrique pour vous aider à trouver le meilleur prix.</p>
                         <p>Ainsi,nous vous aidons à organiser votre voyage et vous économisez de l’argent. Prenez la route avec nous.</p>    
                     </div><!--/col-md-3-->
                     <!-- End About -->
@@ -236,7 +265,8 @@
                         </div>
                     </div>
                     <!-- End Latest --> 
-				
+					
+					
                     <!-- Link List -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="headline"><h2>Liens</h2></div>
@@ -253,10 +283,10 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>Contactez-nous</h2></div>                         
                         <address class="md-margin-bottom-40">
-                            25, Rue d'amiens <br/>
-                            Paris, France <br/>
-                            Téléphone: 09 47 51 25 36 <br/>
-                            Email: <a href="mailto:contact@emotion.fr" class="">contact@emotion.fr</a>
+                            25, Rue de la paix <br />
+                            75002 Paris <br />
+                            Téléphone: 09 47 51 25 36 <br />
+                            Email: <a href="mailto:info@anybiz.com" class="">contact@emotion.fr</a>
                         </address>
                     </div><!--/col-md-3-->
                     <!-- End Address -->
@@ -321,7 +351,8 @@
     </div>     
     <!--=== End Footer Version 1 ===-->
 </div><!--/wrapper-->
-    {% endblock %}
+
+{% endblock %}
     {% block javascripts %}
 
 <!-- JS Global Compulsory -->			
@@ -355,4 +386,4 @@
     <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
     <script src="{{asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
 <![endif]-->
-    {% endblock  %}
+    {% endblock %}

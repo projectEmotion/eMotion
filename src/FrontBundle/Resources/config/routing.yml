@@ -12,3 +12,7 @@ login_page:
 register_page:
     path: /registration
     defaults: { _controller: FrontBundle:Default:registration}
+    
+booking_page:
+    path: /booking
+    defaults: { _controller: FrontBundle:Default:booking}
