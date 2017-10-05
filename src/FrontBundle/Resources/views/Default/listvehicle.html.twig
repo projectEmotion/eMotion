@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
 <div class="wrapper">    
     <!--=== Header ===-->    
@@ -23,16 +22,15 @@
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>   
-                    <li><a href="registration">INSCRIPTION</a></li>
-                    <li class="topbar-devider"></li>   
-                    <li><a href="login">CONNEXION</a></li>
+                    <li><a href="registration">INSCRIPTION</a></li>  
+                    <li class="topbar-devider"></li>
+                    <li><a href="login">CONNEXION</a></li>   
                 </ul>
                 <!-- End Topbar Navigation -->
             </div>
         </div>
         <!-- End Topbar -->
-    
-        <!-- Navbar -->
+         <!-- Navbar -->
         <div class="navbar navbar-default mega-menu" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,7 +39,7 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="home">
                         <img id="logo-header" src="{{ asset('assets/img/emotion.jpg') }}" alt="Logo">
                     </a>
                 </div>
@@ -52,11 +50,7 @@
                       
 					  <!-- Location -->
                         <li>
-<<<<<<< HEAD
-                            <a href="booking">
-=======
                             <a href="listvehicle">
->>>>>>> 9515fa0da185b33f71549c843c8f5684067f4216
                                 Location de vehicule
                             </a>
                         </li>
@@ -78,98 +72,32 @@
         </div>            
         <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->    
-
-	<!--=== Breadcrumbs ===-->
+    <!--=== End Header ===-->
+    <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Inscription</h1>
+            
+            <h1 class="pull-left">Liste des véhicules</h1>
             <ul class="pull-right breadcrumb">
                 <li><a href="/">Home</a></li>
                 <li><a href="">Pages</a></li>
-                <li class="active">Inscription</li>
+                <li class="active">Liste des véhicules</li>
             </ul>
         </div><!--/container-->
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
-
-    <!--=== Content Part ===-->
+ <!--=== Content Part ===-->
     <div class="container content">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page">
-                    <div class="reg-header">
-                        
-                        <p>Déjà inscrit ? Cliquez sur <a href="login" class="color-green">Connexion</a> pour vous connecter.</p>
-                    </div>
-
-                    <label>Username</label>
-                    <input type="text" class="form-control margin-bottom-20">
-                                      
-                    <label>Email Address <span class="color-red">*</span></label>
-                    <input type="text" class="form-control margin-bottom-20">
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label>Password <span class="color-red">*</span></label>
-                            <input type="password" class="form-control margin-bottom-20">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" class="form-control margin-bottom-20">
-                        </div>
-                    </div>
-					
-					<label>Roles</label>
-                    <input type="text" class="form-control margin-bottom-20">
-					
-					<label>Date de naissance</label>
-						<div class="col-10">
-							<input class="form-control" type="date" value="2017-08-19" id="example-date-input">
-						</div>
-						<br>
-						<label>Adresse</label>
-                    <input type="text" class="form-control margin-bottom-20">
-					
-					   <div class="row">
-                        <div class="col-sm-6">
-                            <label>Ville </label>
-                            <input type="text" class="form-control margin-bottom-20">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>Code postal</label>
-                            <input type="text" class="form-control margin-bottom-20">
-                        </div>
-                    </div>
-					
-					<label>Téléphone</label>
-                    <input type="text" class="form-control margin-bottom-20">
-					
-					<label>Licence</label>
-                    <input type="text" class="form-control margin-bottom-20">
-					
-					
-	
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-lg-6 checkbox">
-                            <label>
-                                <input type="checkbox"> 
-                                J'ai lu  <a href="page_terms.html" class="color-green">Les conditions générales</a>
-                            </label>                        
-                        </div>
-                        <div class="col-lg-6 text-right">
-                            <button class="btn-u" type="submit">S'inscrire</button>                        
-                        </div>
-                    </div>
-                </form>
+               
             </div>
         </div>
     </div><!--/container-->		
     <!--=== End Content Part ===-->
 
-    <!--=== Footer Version 1 ===-->
+
+<!--=== Footer Version 1 ===-->
     <div class="footer-v1">
         <div class="footer">
             <div class="container">
@@ -276,39 +204,5 @@
     </div>     
     <!--=== End Footer Version 1 ===-->
 </div><!--/wrapper-->
-    
 {% endblock %}
-    {% block javascripts %}
-
-<!-- JS Global Compulsory -->			
-<script  src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-<script  src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
-<script  src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script> 
-<!-- JS Implementing Plugins -->
-<script  src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
-<script  src="{{ asset('assets/plugins/flexslider/jquery.flexslider-min.js') }}"></script>
-<script  src="{{ asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.js') }}"></script>
-<script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/greensock.js') }}"></script>
-<script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js') }}"></script>
-<script  src="{{ asset('assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js') }}"></script>
-<!-- JS Customization -->
-<script  src="{{ asset('assets/js/custom.js') }}"></script>
-<!-- JS Page Level -->           
-<script  src="{{ asset('assets/js/app.js') }}"></script>
-<script  src="{{ asset('assets/js/plugins/layer-slider.js') }}"></script>
-<script  src="{{ asset('assets/js/plugins/owl-recent-works.js') }}"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-      	App.init();
-        App.initSliders();
-        LayerSlider.initLayerSlider();   
-        OwlRecentWorks.initOwlRecentWorksV2();
-    });
-</script>
-
-<!--[if lt IE 9]>
-    <script src="{{ asset('assets/plugins/respond.js') }}"></script>
-    <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
-    <script src="{{asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
-<![endif]-->
-    {% endblock %}
+        
