@@ -35,16 +35,15 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:registration.html.twig');
     }
-<<<<<<< HEAD
+
     
     public function bookingAction()
     {
         return $this->render('FrontBundle:Default:booking.html.twig');
-=======
+    }
 
     public function listvehicleAction()
     {
         return $this->render('FrontBundle:Default:listvehicle.html.twig');
->>>>>>> 9515fa0da185b33f71549c843c8f5684067f4216
     }
 }

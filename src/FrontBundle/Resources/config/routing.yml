@@ -12,14 +12,14 @@ login_page:
 register_page:
     path: /registration
     defaults: { _controller: FrontBundle:Default:registration}
-<<<<<<< HEAD
+
     
 booking_page:
     path: /booking
     defaults: { _controller: FrontBundle:Default:booking}
-=======
+
 
 listvehicle_page:
     path: /listvehicle
     defaults: { _controller: FrontBundle:Default:listvehicle}
->>>>>>> 9515fa0da185b33f71549c843c8f5684067f4216
+
