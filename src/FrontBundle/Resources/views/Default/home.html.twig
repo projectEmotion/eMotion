@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>{% block title %}eMotion | Location de vehicule{% endblock %}</title>
+{% extends 'base.html.twig' %}
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Favicon -->
-   <!-- <link rel="shortcut icon" href="favicon.ico"> -->
-
-    {% block stylesheets %}
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/line-icons/line-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/flexslider/flexslider.css') }}">    
-    <link rel="stylesheet" href="{{ asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/layer-slider/layerslider/css/layerslider.css')  }}">
-
-    <!-- CSS Theme -->    
-    <link rel="stylesheet" href="{{ asset('assets/css/theme-colors/default.css') }}">
-
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    {% endblock %}
-</head>	
-
-<body>
-     {% block body %}
+{% block body %}
 <div class="wrapper">    
     <!--=== Header ===-->    
     <div class="header">
@@ -384,12 +349,10 @@
         OwlRecentWorks.initOwlRecentWorksV2();
     });
 </script>
-    {% endblock %}
+
 <!--[if lt IE 9]>
     <script src="{{ asset('assets/plugins/respond.js') }}"></script>
     <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
     <script src="{{asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
 <![endif]-->
-
-</body>
-</html>	
+    {% endblock  %}

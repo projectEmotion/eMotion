@@ -1,132 +1,95 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>{% block title %}eMotion | Location de vehicule{% endblock %}</title>
+{% extends 'base.html.twig' %}
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-    {% block stylesheets %}
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/line-icons/line-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}">
-
-    <!-- CSS Page Style -->    
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/page_log_reg_v2.css') }}">    
-
-    <!-- CSS Theme -->    
-    <link rel="stylesheet" href="{{ asset('assets/css/theme-colors/default.css') }}">
-
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    {% endblock %}
-</head> 
-
-<body>
-    {% block body %}
-<!--=== Content Part ===-->    
-<div class="container">
-    <!--Reg Block-->
-    <div class="reg-block">
-        <div class="reg-block-header">
-            <h2>Connexion</h2>
-            <ul class="social-icons text-center">
-            </ul>
-            <p>Pas de compte ? <a class="color-green" href="inscription.html">inscription</a> gratuite ici.</p>            
-        </div>
-
-         <div class="input-group margin-bottom-20">
-             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-             <input type="text" placeholder="Username" class="form-control">
-         </div>
-        <div class="input-group margin-bottom-20">
-            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input type="password" placeholder="Mot de passe" class="form-control">
-        </div> 
-        <hr>
-
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> 
-                <p>Se souvenir de moi à la prochaine utilisation </p>
-            </label>            
-        </div>
-                                
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <button type="submit" class="btn-u btn-block">Connexion</button>
+{% block body %}
+    <!--=== Content Part ===-->
+    <div class="container">
+        <!--Reg Block-->
+        <div class="reg-block">
+            <div class="reg-block-header">
+                <h2>Connexion</h2>
+                <ul class="social-icons text-center">
+                </ul>
+                <p>Pas de compte ? <a class="color-green" href="registration">inscription</a> gratuite ici.</p>
             </div>
-        </div>
-		
-		<div class="row text-center">
-			<u>
-				<a href="oublie_mdp.html" class="text-info" id="passForgot">Mot de passe oublié</a>
-			</u>
-		</div>
-		
-    </div>
-    <!--End Reg Block-->
-</div><!--/container-->
-<!--=== End Content Part ===-->
-    {% endblock %}
-    {% block javascripts %}
 
-<!-- JS Global Compulsory -->           
-<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script> 
-<!-- JS Implementing Plugins -->           
-<script src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
-<script src="{{ asset('assets/plugins/countdown/jquery.countdown.js') }}"></script>
-<script src="{{ asset('assets/plugins/backstretch/jquery.backstretch.min.js') }}"></script>
-<script type="text/javascript">
-    $.backstretch([
-      "assets/img/bg/5.jpg",
-      "assets/img/bg/4.jpg",
-      ], {
-        fade: 1000,
-        duration: 7000
-    });
-</script>
-<!-- JS Customization -->
-<script src="{{ asset('assets/js/custom.js') }}"></script>
-<!-- JS Page Level -->           
-<script src="assets/js/app.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        App.init();      
-    });
-</script>
-<!--[if lt IE 9]>
+            <div class="input-group margin-bottom-20">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" placeholder="Username" class="form-control">
+            </div>
+            <div class="input-group margin-bottom-20">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" placeholder="Mot de passe" class="form-control">
+            </div>
+            <hr>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">
+                    <p>Se souvenir de moi à la prochaine utilisation </p>
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <button type="submit" class="btn-u btn-block">Connexion</button>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <u>
+                    <a href="oublie_mdp" class="text-info" id="passForgot">Mot de passe oublié</a>
+                </u>
+            </div>
+
+        </div>
+        <!--End Reg Block-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+{% endblock %}
+{% block javascripts %}
+
+    <!-- JS Global Compulsory -->
+    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- JS Implementing Plugins -->
+    <script src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
+    <script src="{{ asset('assets/plugins/countdown/jquery.countdown.js') }}"></script>
+    <script src="{{ asset('assets/plugins/backstretch/jquery.backstretch.min.js') }}"></script>
+    <script type="text/javascript">
+        $.backstretch([
+            "assets/img/bg/5.jpg",
+            "assets/img/bg/4.jpg",
+        ], {
+            fade: 1000,
+            duration: 7000
+        });
+    </script>
+    <!-- JS Customization -->
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <!-- JS Page Level -->
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+        });
+    </script>
+    <!--[if lt IE 9]>
     <script src="{{ asset('assets/plugins/respond.js') }}"></script>
     <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
-<![endif]-->
+    <![endif]-->
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29166220-1']);
-  _gaq.push(['_setDomainName', 'htmlstream.com']);
-  _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29166220-1']);
+        _gaq.push(['_setDomainName', 'htmlstream.com']);
+        _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 {% endblock %}
-</body>
-</html> 
