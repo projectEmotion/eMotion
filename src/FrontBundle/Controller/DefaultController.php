@@ -46,4 +46,9 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:listvehicle.html.twig');
     }
+
+    public function basketAction()
+    {
+        return $this->render('FrontBundle:Default:basket.html.twig');
+    }
 }
