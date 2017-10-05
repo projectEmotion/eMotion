@@ -31,6 +31,10 @@ AppBundle\Entity\Reservation:
             type: datetime
             nullable: true
             column: end_date
+        status:
+            type: string
+            nullable: true
+            column: status
     manyToOne:
         idUser:
             targetEntity: User

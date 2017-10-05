@@ -51,6 +51,14 @@ class Reservation
      * })
      */
     private $idUser;
+     
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", nullable=false)
+     */
+    private $status;
+    
 
     /**
      * @var \AppBundle\Entity\Vehicle
@@ -62,6 +70,7 @@ class Reservation
      */
     private $idVehicle;
 
+    
 
 
     /**
@@ -145,7 +154,30 @@ class Reservation
     {
         return $this->endDate;
     }
-
+     /**
+     * Set status
+     *
+     * @param string $status
+     *
+     * @return Reservation
+     */
+     public function setStatus($status)
+     {
+         $this->status = $status;
+ 
+         return $this;
+     }
+ 
+     /**
+      * Get status
+      *
+      * @return string
+      */
+     public function getStatus()
+     {
+         return $this->status;
+     }
+   
     /**
      * Set idUser
      *
