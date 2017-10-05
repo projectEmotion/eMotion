@@ -21,7 +21,7 @@ class UserAdmin extends AbstractAdmin
     {
         $formMapper->add('username','text');
         $formMapper->add('email','text');
-        //$formMapper->add('password','text');
+        $formMapper->add('password','password');
         $formMapper->add('adress','text');
         $formMapper->add('phone','text');
         $formMapper->add('codePostal','text');

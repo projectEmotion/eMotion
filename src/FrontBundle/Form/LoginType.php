@@ -13,22 +13,28 @@ class LoginType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $builder->add('username','text',array('required' => true,'constraints'=>array(new Length(array('min' => 3)))));
-        $builder->add('plainPassword','text');
+        $builder->add('userName','text',
+                array(
+                    'required' => true,
+                    'constraints'=>array(
+                        new Length(
+                                array('min' => 3)
+                                )
+                        ),
+                    'attr'=>[
+                        'class'=>'form-control',
+                        'placeholder' => 'Username'
+                    ])
+                );
+        $builder->add('password','password');
 
     }
 
-    public function getParent()
-    {
-        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
-
-        // Or for Symfony < 2.8
-        // return 'fos_user_registration';
-    }
+    
 
     public function getBlockPrefix()
     {
-        return 'app_user_registration';
+        return 'emotion_user_login';
     }
 
     // For Symfony 2.x

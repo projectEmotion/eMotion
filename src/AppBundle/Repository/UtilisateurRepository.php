@@ -10,4 +10,8 @@ namespace AppBundle\Repository;
  */
 class UtilisateurRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findUser(\AppBundle\Entity\User $user,$em)
+    {
+        dump($user);
+    }
 }
