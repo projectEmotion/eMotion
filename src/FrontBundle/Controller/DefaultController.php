@@ -35,4 +35,9 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:registration.html.twig');
     }
+
+    public function listvehicleAction()
+    {
+        return $this->render('FrontBundle:Default:listvehicle.html.twig');
+    }
 }

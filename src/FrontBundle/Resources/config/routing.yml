@@ -12,3 +12,7 @@ login_page:
 register_page:
     path: /registration
     defaults: { _controller: FrontBundle:Default:registration}
+
+listvehicle_page:
+    path: /listvehicle
+    defaults: { _controller: FrontBundle:Default:listvehicle}
