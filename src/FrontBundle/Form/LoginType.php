@@ -26,7 +26,17 @@ class LoginType extends AbstractType
                         'placeholder' => 'Username'
                     ])
                 );
-        $builder->add('password','password');
+        $builder->add('password','password',array(
+                    'required' => true,
+                    'constraints'=>array(
+                        new Length(
+                                array('min' => 3)
+                                )
+                        ),
+                    'attr'=>[
+                        'class'=>'form-control',
+                        'placeholder' => 'Password'
+                    ]));
 
     }
 

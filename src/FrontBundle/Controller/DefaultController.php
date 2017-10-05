@@ -19,14 +19,14 @@ class DefaultController extends Controller
     public function loginAction(Request $req)
     {
         $User = new User();
-        
+        $em = $this->getDoctrine()->getManager();
         $form = $this->createForm(LoginType::class,$User);
         
         if($req->isMethod('POST')){
             $form->handleRequest($req);
             $user = $this->getDoctrine()
                     ->getRepository('AppBundle:User')
-                    ->findUser($User);
+                    ->findUser($User,$em);
         }
         return $this->render('FrontBundle:Default:login.html.twig',['form'=>$form->createview()]);
     }
