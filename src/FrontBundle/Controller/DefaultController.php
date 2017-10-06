@@ -55,17 +55,14 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:basket.html.twig');
     }
-<<<<<<< HEAD
     public function paymentAction()
     {
         return $this->render('FrontBundle:Default:payment.html.twig');
     }
     
-=======
 
     public function myprofileAction()
     {
         return $this->render('FrontBundle:Default:myprofile.html.twig');
     }
->>>>>>> 360b090c192126d6ea1fab248df47cd26452f3bd
 }
