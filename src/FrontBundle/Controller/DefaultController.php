@@ -51,4 +51,9 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:basket.html.twig');
     }
+    public function paymentAction()
+    {
+        return $this->render('FrontBundle:Default:payment.html.twig');
+    }
+    
 }
