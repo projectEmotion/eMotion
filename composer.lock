@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b5cb5c6ba13096fcd646e0f1bb0a036",
+    "content-hash": "46a54f45513ddf7b5e58423e3682a7d5",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -898,6 +898,1799 @@
             "time": "2017-09-18T06:50:20+00:00"
         },
         {
+            "name": "elcodi/attribute",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Attribute.git",
+                "reference": "2a7cd45f8344b63068934c1fcf47b3fd63b84f74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Attribute/zipball/2a7cd45f8344b63068934c1fcf47b3fd63b84f74",
+                "reference": "2a7cd45f8344b63068934c1fcf47b3fd63b84f74",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Attribute\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Attribute/contributors"
+                }
+            ],
+            "description": "Elcodi Attribute Component",
+            "homepage": "https://github.com/elcodi/Attribute",
+            "keywords": [
+                "attribute",
+                "component",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/attribute-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/AttributeBundle.git",
+                "reference": "299d195dd839e612a1cabef8a1662f5e2cced215"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/AttributeBundle/zipball/299d195dd839e612a1cabef8a1662f5e2cced215",
+                "reference": "299d195dd839e612a1cabef8a1662f5e2cced215",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/attribute": "^2.0",
+                "elcodi/core-bundle": "^2.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\AttributeBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/AttributeBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Attribute Bundle",
+            "homepage": "https://github.com/elcodi/AttributeBundle",
+            "keywords": [
+                "attribute",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/cart",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Cart.git",
+                "reference": "10c4c12f2d9dc55e8071a3fe2c5f98b2017c8f1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Cart/zipball/10c4c12f2d9dc55e8071a3fe2c5f98b2017c8f1a",
+                "reference": "10c4c12f2d9dc55e8071a3fe2c5f98b2017c8f1a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "elcodi/currency": "^2.0",
+                "elcodi/product": "^2.0",
+                "elcodi/state-transition-machine": "^2.0",
+                "elcodi/user": "^2.0",
+                "php": "^5.4|^7.0",
+                "symfony/event-dispatcher": "^2.7|^3.0",
+                "symfony/http-foundation": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Cart\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Cart/contributors"
+                }
+            ],
+            "description": "Elcodi Cart Component",
+            "homepage": "https://github.com/elcodi/Cart",
+            "keywords": [
+                "cart",
+                "component",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:42:59+00:00"
+        },
+        {
+            "name": "elcodi/cart-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/CartBundle.git",
+                "reference": "68ff78ffd272242997c62dbfa6fce241bb7256eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/CartBundle/zipball/68ff78ffd272242997c62dbfa6fce241bb7256eb",
+                "reference": "68ff78ffd272242997c62dbfa6fce241bb7256eb",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/cart": "^2.0",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/currency-bundle": "^2.0",
+                "elcodi/product-bundle": "^2.0",
+                "elcodi/shipping-bundle": "^2.0",
+                "elcodi/state-transition-machine-bundle": "^2.0",
+                "elcodi/store-bundle": "^2.0",
+                "elcodi/user-bundle": "^2.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\CartBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/CartBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Cart Bundle",
+            "homepage": "https://github.com/elcodi/CartBundle",
+            "keywords": [
+                "cart",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:42:59+00:00"
+        },
+        {
+            "name": "elcodi/core",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Core.git",
+                "reference": "bb32771a4c3c5dfc0c8a089342e74ccbd1fb5102"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Core/zipball/bb32771a4c3c5dfc0c8a089342e74ccbd1fb5102",
+                "reference": "bb32771a4c3c5dfc0c8a089342e74ccbd1fb5102",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.0",
+                "doctrine/common": "^2.5",
+                "php": "^5.4|^7.0",
+                "symfony/console": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/event-dispatcher": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0",
+                "symfony/stopwatch": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Core/contributors"
+                }
+            ],
+            "description": "Elcodi Core Component",
+            "homepage": "https://github.com/elcodi/Core",
+            "keywords": [
+                "component",
+                "core",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/core-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/CoreBundle.git",
+                "reference": "b89ecd1934355a98ecdaae83c951d550b410f227"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/CoreBundle/zipball/b89ecd1934355a98ecdaae83c951d550b410f227",
+                "reference": "b89ecd1934355a98ecdaae83c951d550b410f227",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/doctrine-bundle": "^1.5.0",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^5.2",
+                "mmoreram/extractor": "^1.1.1",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/console": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/event-dispatcher": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0",
+                "symfony/yaml": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\CoreBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/CoreBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Core Bundle",
+            "homepage": "https://github.com/elcodi/CoreBundle",
+            "keywords": [
+                "core",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:42:59+00:00"
+        },
+        {
+            "name": "elcodi/currency",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Currency.git",
+                "reference": "a75ccf89aed15fcb9821838c301c3fba0d19e743"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Currency/zipball/a75ccf89aed15fcb9821838c301c3fba0d19e743",
+                "reference": "a75ccf89aed15fcb9821838c301c3fba0d19e743",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "elcodi/language": "^2.0",
+                "php": "^5.4|^7.0",
+                "sebastian/money": "^1.5",
+                "symfony/http-foundation": "^2.7|^3.0",
+                "twig/twig": "^1.23"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "suggest": {
+                "guzzle/http": "Required for OpenExchangeRates adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Currency\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Currency/contributors"
+                }
+            ],
+            "description": "Elcodi Currency Component",
+            "homepage": "https://github.com/elcodi/Currency",
+            "keywords": [
+                "component",
+                "currency",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/currency-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/CurrencyBundle.git",
+                "reference": "742aeef0af0df010f6965081e7bbe440bbffb4be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/CurrencyBundle/zipball/742aeef0af0df010f6965081e7bbe440bbffb4be",
+                "reference": "742aeef0af0df010f6965081e7bbe440bbffb4be",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/currency": "^2.0",
+                "elcodi/language-bundle": "^2.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "ocramius/proxy-manager": "^1.0",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0",
+                "symfony/proxy-manager-bridge": "^2.7|^3.0",
+                "symfony/twig-bundle": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\CurrencyBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Gonzalo Míguez",
+                    "email": "mrzard@gmail.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/CurrencyBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Currency Bundle",
+            "homepage": "https://github.com/elcodi/CurrencyBundle",
+            "keywords": [
+                "currency",
+                "ecommerce",
+                "elcodi"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/geo",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Geo.git",
+                "reference": "90d90d63215bd603fcd01f5f38cf9549dbac6cae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Geo/zipball/90d90d63215bd603fcd01f5f38cf9549dbac6cae",
+                "reference": "90d90d63215bd603fcd01f5f38cf9549dbac6cae",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "goodby/csv": "^1.0",
+                "mmoreram/extractor": "^1.0",
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Geo\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Geo/contributors"
+                }
+            ],
+            "description": "Elcodi Geo Component",
+            "homepage": "https://github.com/elcodi/Geo",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "geo"
+            ],
+            "time": "2016-02-09T15:38:56+00:00"
+        },
+        {
+            "name": "elcodi/geo-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/GeoBundle.git",
+                "reference": "42bd5ff5d861ed7b7f0508ca2817008f3acd1f2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/GeoBundle/zipball/42bd5ff5d861ed7b7f0508ca2817008f3acd1f2d",
+                "reference": "42bd5ff5d861ed7b7f0508ca2817008f3acd1f2d",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/geo": "^2.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "ocramius/proxy-manager": "^1.0",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0",
+                "symfony/proxy-manager-bridge": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\GeoBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/GeoBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Geo Bundle",
+            "homepage": "https://github.com/elcodi/GeoBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "geo"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/language",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Language.git",
+                "reference": "94c052a91e3c26f7a3a95d066b1fd035120b3b64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Language/zipball/94c052a91e3c26f7a3a95d066b1fd035120b3b64",
+                "reference": "94c052a91e3c26f7a3a95d066b1fd035120b3b64",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Language\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Language/contributors"
+                }
+            ],
+            "description": "Elcodi Language Component",
+            "homepage": "https://github.com/elcodi/Language",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "language"
+            ],
+            "time": "2016-01-31T16:07:27+00:00"
+        },
+        {
+            "name": "elcodi/language-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/LanguageBundle.git",
+                "reference": "4c8ee3141d1e901e545ceb001d44be546e447fd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/LanguageBundle/zipball/4c8ee3141d1e901e545ceb001d44be546e447fd5",
+                "reference": "4c8ee3141d1e901e545ceb001d44be546e447fd5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/language": "^2.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\LanguageBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/LanguageBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Language Bundle",
+            "homepage": "https://github.com/elcodi/LanguageBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "language"
+            ],
+            "time": "2016-01-31T16:07:27+00:00"
+        },
+        {
+            "name": "elcodi/media",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Media.git",
+                "reference": "78eb56ef6fd82c1d2c5d0e75868afa7f20ece513"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Media/zipball/78eb56ef6fd82c1d2c5d0e75868afa7f20ece513",
+                "reference": "78eb56ef6fd82c1d2c5d0e75868afa7f20ece513",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "knplabs/gaufrette": "^0.1.7",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/http-foundation": "^2.7|^3.0",
+                "symfony/process": "^2.7|^3.0",
+                "symfony/routing": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "suggest": {
+                "twig/twig": "Required if using Twig extensions"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Media\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Media/contributors"
+                }
+            ],
+            "description": "Elcodi Media Component",
+            "homepage": "https://github.com/elcodi/Media",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "media"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/media-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/MediaBundle.git",
+                "reference": "84ca752646aa0f31a8c8ed2dab61af026e0f6d43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/MediaBundle/zipball/84ca752646aa0f31a8c8ed2dab61af026e0f6d43",
+                "reference": "84ca752646aa0f31a8c8ed2dab61af026e0f6d43",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/media": "^2.0",
+                "knplabs/knp-gaufrette-bundle": "^0.3.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0",
+                "symfony/routing": "^2.7|^3.0",
+                "symfony/twig-bundle": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\MediaBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/MediaBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Media Bundle",
+            "homepage": "https://github.com/elcodi/MediaBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "media"
+            ],
+            "time": "2016-02-15T18:22:57+00:00"
+        },
+        {
+            "name": "elcodi/metadata",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/MetaData.git",
+                "reference": "faf2a998f1cdb671db73a9f956dccfff3d916ce2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/MetaData/zipball/faf2a998f1cdb671db73a9f956dccfff3d916ce2",
+                "reference": "faf2a998f1cdb671db73a9f956dccfff3d916ce2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\MetaData\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/MetaData/contributors"
+                }
+            ],
+            "description": "Elcodi MetaData Component",
+            "homepage": "https://github.com/elcodi/MetaData",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "meta"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/product",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Product.git",
+                "reference": "5122bd00173fe21829430677193d7ef72334d02f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Product/zipball/5122bd00173fe21829430677193d7ef72334d02f",
+                "reference": "5122bd00173fe21829430677193d7ef72334d02f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/attribute": "^2.0",
+                "elcodi/core": "^2.0",
+                "elcodi/currency": "^2.0",
+                "elcodi/language": "^2.0",
+                "elcodi/media": "^2.0",
+                "elcodi/metadata": "^2.0",
+                "php": "^5.4|^7.0",
+                "twig/twig": "^1.23"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Product\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Product/contributors"
+                }
+            ],
+            "description": "Elcodi Product Component",
+            "homepage": "https://github.com/elcodi/Product",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "product"
+            ],
+            "time": "2016-02-09T14:44:38+00:00"
+        },
+        {
+            "name": "elcodi/product-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/ProductBundle.git",
+                "reference": "212d481549ad455d720a67331c57f3cc99cb1e82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/ProductBundle/zipball/212d481549ad455d720a67331c57f3cc99cb1e82",
+                "reference": "212d481549ad455d720a67331c57f3cc99cb1e82",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/doctrine-cache-bundle": "^1.0",
+                "doctrine/orm": "^2.5",
+                "elcodi/attribute-bundle": "^2.0",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/currency-bundle": "^2.0",
+                "elcodi/language-bundle": "^2.0",
+                "elcodi/media-bundle": "^2.0",
+                "elcodi/product": "^2.0",
+                "elcodi/store-bundle": "^2.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/expression-language": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0",
+                "symfony/twig-bundle": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\ProductBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/ProductBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Product Bundle",
+            "homepage": "https://github.com/elcodi/ProductBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "product"
+            ],
+            "time": "2016-01-31T01:03:27+00:00"
+        },
+        {
+            "name": "elcodi/shipping",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Shipping.git",
+                "reference": "30fe7f68d02e890a8159948cfef0e158ff6743d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Shipping/zipball/30fe7f68d02e890a8159948cfef0e158ff6743d4",
+                "reference": "30fe7f68d02e890a8159948cfef0e158ff6743d4",
+                "shasum": ""
+            },
+            "require": {
+                "elcodi/cart": "^2.0",
+                "elcodi/core": "^2.0",
+                "elcodi/currency": "^2.0",
+                "php": "^5.4|^7.0",
+                "symfony/event-dispatcher": "^2.7|^3.0",
+                "twig/twig": "^1.23"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Shipping\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Shipping/contributors"
+                }
+            ],
+            "description": "Elcodi Shipping Component",
+            "homepage": "https://github.com/elcodi/Shipping",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "shipping"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/shipping-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/ShippingBundle.git",
+                "reference": "db4884e65290247798e495b18fad015678eb6618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/ShippingBundle/zipball/db4884e65290247798e495b18fad015678eb6618",
+                "reference": "db4884e65290247798e495b18fad015678eb6618",
+                "shasum": ""
+            },
+            "require": {
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/shipping": "^2.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\ShippingBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/ShippingBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Shipping Bundle",
+            "homepage": "https://github.com/elcodi/ShippingBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "shipping"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/state-transition-machine",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/StateTransitionMachine.git",
+                "reference": "89c5b58fdcd4b250e9bab20293b88ff20199940f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/StateTransitionMachine/zipball/89c5b58fdcd4b250e9bab20293b88ff20199940f",
+                "reference": "89c5b58fdcd4b250e9bab20293b88ff20199940f",
+                "shasum": ""
+            },
+            "require": {
+                "elcodi/core": "^2.0",
+                "php": "^5.4|^7.0",
+                "psr/log": "^1.0",
+                "symfony/event-dispatcher": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\StateTransitionMachine\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/StateTransitionMachine/contributors"
+                }
+            ],
+            "description": "Elcodi State Transition Machine Component",
+            "homepage": "https://github.com/elcodi/StateTransitionMachine",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "state transition machine"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/state-transition-machine-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/StateTransitionMachineBundle.git",
+                "reference": "3335e6f5a60935a7ebcbfe0d0dbe5a7bf2c9d8f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/StateTransitionMachineBundle/zipball/3335e6f5a60935a7ebcbfe0d0dbe5a7bf2c9d8f2",
+                "reference": "3335e6f5a60935a7ebcbfe0d0dbe5a7bf2c9d8f2",
+                "shasum": ""
+            },
+            "require": {
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/state-transition-machine": "^2.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\StateTransitionMachineBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/StateTransitionMachineBundle/contributors"
+                }
+            ],
+            "description": "Elcodi State Transition Machine Bundle",
+            "homepage": "https://github.com/elcodi/StateTransitionMachineBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "state transition machine"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/store",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/Store.git",
+                "reference": "f1ff3b658249b2376ef8bb30fe27c2fa116da995"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/Store/zipball/f1ff3b658249b2376ef8bb30fe27c2fa116da995",
+                "reference": "f1ff3b658249b2376ef8bb30fe27c2fa116da995",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core": "^2.0",
+                "elcodi/currency": "^2.0",
+                "elcodi/geo": "^2.0",
+                "elcodi/language": "^2.0",
+                "elcodi/media": "^2.0",
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\Store\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/Store/contributors"
+                }
+            ],
+            "description": "Elcodi Shipping Component",
+            "homepage": "https://github.com/elcodi/Store",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "store"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/store-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/StoreBundle.git",
+                "reference": "7825806c1a620eea55818edc600aa8086f9c9ca9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/StoreBundle/zipball/7825806c1a620eea55818edc600aa8086f9c9ca9",
+                "reference": "7825806c1a620eea55818edc600aa8086f9c9ca9",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/currency-bundle": "^2.0",
+                "elcodi/geo-bundle": "^2.0",
+                "elcodi/language-bundle": "^2.0",
+                "elcodi/store": "^2.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\StoreBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/StoreBundle/contributors"
+                }
+            ],
+            "description": "Elcodi Store Bundle",
+            "homepage": "https://github.com/elcodi/StoreBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "store"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
+            "name": "elcodi/user",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/User.git",
+                "reference": "a75695e2900681427c149b9c55d0359d4a639c69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/User/zipball/a75695e2900681427c149b9c55d0359d4a639c69",
+                "reference": "a75695e2900681427c149b9c55d0359d4a639c69",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/cart": "^2.0",
+                "elcodi/core": "^2.0",
+                "elcodi/geo": "^2.0",
+                "elcodi/language": "^2.0",
+                "php": "^5.4|^7.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/event-dispatcher": "^2.7|^3.0",
+                "symfony/routing": "^2.7|^3.0",
+                "symfony/security": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Component\\User\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/User/contributors"
+                }
+            ],
+            "description": "Elcodi User Component",
+            "homepage": "https://github.com/elcodi/User",
+            "keywords": [
+                "component",
+                "ecommerce",
+                "elcodi",
+                "user"
+            ],
+            "time": "2016-02-09T14:44:38+00:00"
+        },
+        {
+            "name": "elcodi/user-bundle",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elcodi/UserBundle.git",
+                "reference": "1ac4768ae0f7ae5647e1789a8c744db330aa6d55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elcodi/UserBundle/zipball/1ac4768ae0f7ae5647e1789a8c744db330aa6d55",
+                "reference": "1ac4768ae0f7ae5647e1789a8c744db330aa6d55",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.5",
+                "doctrine/orm": "^2.5",
+                "elcodi/cart-bundle": "^2.0",
+                "elcodi/core-bundle": "^2.0",
+                "elcodi/geo-bundle": "^2.0",
+                "elcodi/language-bundle": "^2.0",
+                "elcodi/user": "^2.0",
+                "ircmaxell/password-compat": "^1.0",
+                "mmoreram/simple-doctrine-mapping": "^1.0",
+                "mmoreram/symfony-bundle-dependencies": "^1.1.1",
+                "php": "^5.4|^7.0",
+                "symfony/config": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/http-kernel": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.1",
+                "elcodi/fixtures-booster-bundle": "^2.0",
+                "elcodi/test-common-bundle": "^2.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ],
+                "psr-4": {
+                    "Elcodi\\Bundle\\UserBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "Aldo Chiecchia",
+                    "email": "zimage@tiscali.it"
+                },
+                {
+                    "name": "The Awesome Elcodi Community",
+                    "homepage": "https://github.com/elcodi/UserBundle/contributors"
+                }
+            ],
+            "description": "Elcodi User Bundle",
+            "homepage": "https://github.com/elcodi/UserBundle",
+            "keywords": [
+                "ecommerce",
+                "elcodi",
+                "user"
+            ],
+            "time": "2016-01-30T21:06:03+00:00"
+        },
+        {
             "name": "fig/link-util",
             "version": "1.0.0",
             "source": {
@@ -1029,6 +2822,216 @@
             "time": "2017-05-31T11:50:14+00:00"
         },
         {
+            "name": "goodby/csv",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goodby/csv.git",
+                "reference": "e71217b8d6110f3d1ac3784ef9b8a2383c3398b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goodby/csv/zipball/e71217b8d6110f3d1ac3784ef9b8a2383c3398b9",
+                "reference": "e71217b8d6110f3d1ac3784ef9b8a2383c3398b9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": ">=1.1.0",
+                "mockery/mockery": ">=0.7.2",
+                "phpunit/phpunit": "3.7.*",
+                "suin/php-expose": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Goodby\\CSV": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "suin",
+                    "email": "suinyeze@gmail.com",
+                    "homepage": "https://www.facebook.com/suinyeze",
+                    "role": "Developer, Renaming Specialist"
+                },
+                {
+                    "name": "reoring",
+                    "email": "mori.reo@gmail.com",
+                    "homepage": "https://www.facebook.com/reoring",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSV import/export library",
+            "homepage": "https://github.com/goodby/csv",
+            "keywords": [
+                "csv",
+                "export",
+                "import"
+            ],
+            "time": "2015-06-29T10:28:19+00:00"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "5.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "70f1fa53b71c4647bf2762c09068a95f77e12fb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/70f1fa53b71c4647bf2762c09068a95f77e12fb8",
+                "reference": "70f1fa53b71c4647bf2762c09068a95f77e12fb8",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "^1.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2016-07-15T19:28:39+00:00"
+        },
+        {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-05-20T03:37:09+00:00"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-10-12T19:18:40+00:00"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -1080,6 +3083,48 @@
             "time": "2015-11-10T17:04:01+00:00"
         },
         {
+            "name": "ircmaxell/password-compat",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ircmaxell/password_compat.git",
+                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/5c5cde8822a69545767f7c7f3058cb15ff84614c",
+                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/password.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Ferrara",
+                    "email": "ircmaxell@php.net",
+                    "homepage": "http://blog.ircmaxell.com"
+                }
+            ],
+            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
+            "homepage": "https://github.com/ircmaxell/password_compat",
+            "keywords": [
+                "hashing",
+                "password"
+            ],
+            "time": "2014-11-20T16:49:30+00:00"
+        },
+        {
             "name": "jdorn/sql-formatter",
             "version": "v1.2.17",
             "source": {
@@ -1128,6 +3173,148 @@
                 "sql"
             ],
             "time": "2014-01-12T16:20:24+00:00"
+        },
+        {
+            "name": "knplabs/gaufrette",
+            "version": "v0.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/Gaufrette.git",
+                "reference": "4c73bb66ff41d7c9beb57372a82047cf5dcc6d1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/4c73bb66ff41d7c9beb57372a82047cf5dcc6d1c",
+                "reference": "4c73bb66ff41d7c9beb57372a82047cf5dcc6d1c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "amazonwebservices/aws-sdk-for-php": "1.5.*",
+                "aws/aws-sdk-php": "~2",
+                "doctrine/dbal": ">=2.3",
+                "dropbox-php/dropbox-php": "*",
+                "google/apiclient": "~1.1",
+                "herzult/php-ssh": "*",
+                "microsoft/windowsazure": "dev-master",
+                "mikey179/vfsstream": "~1.2.0",
+                "phpseclib/phpseclib": "dev-master",
+                "phpspec/phpspec": "2.0.*",
+                "phpunit/phpunit": "3.7.*",
+                "rackspace/php-opencloud": "1.9.*"
+            },
+            "suggest": {
+                "amazonwebservices/aws-sdk-for-php": "to use the legacy Amazon S3 adapters",
+                "aws/aws-sdk-php": "to use the Amazon S3 adapter",
+                "doctrine/dbal": "to use the Doctrine DBAL adapter",
+                "dropbox-php/dropbox-php": "to use the Dropbox adapter",
+                "ext-apc": "to use the APC adapter",
+                "ext-curl": "*",
+                "ext-fileinfo": "This extension is used to automatically detect the content-type of a file in the AwsS3, OpenCloud, AzureBlogStorage and GoogleCloudStorage adapters",
+                "ext-mbstring": "*",
+                "ext-mongo": "*",
+                "ext-zip": "to use the Zip adapter",
+                "google/apiclient": "to use GoogleCloudStorage adapter",
+                "herzult/php-ssh": "to use SFtp adapter",
+                "knplabs/knp-gaufrette-bundle": "to use with Symfony2",
+                "microsoft/windowsazure": "to use Microsoft Azure Blob Storage adapter",
+                "phpseclib/phpseclib": "to use PhpseclibSftp adapter",
+                "rackspace/php-opencloud": "to use Opencloud adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gaufrette": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The contributors",
+                    "homepage": "http://github.com/knplabs/Gaufrette/contributors"
+                },
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "PHP5 library that provides a filesystem abstraction layer",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2015-03-09T08:06:57+00:00"
+        },
+        {
+            "name": "knplabs/knp-gaufrette-bundle",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpGaufretteBundle.git",
+                "reference": "44cf552e14031517516458b0e394f16dd36a131b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/44cf552e14031517516458b0e394f16dd36a131b",
+                "reference": "44cf552e14031517516458b0e394f16dd36a131b",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/gaufrette": "~0.1.7|~0.2",
+                "symfony/framework-bundle": "~2.0|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2",
+                "symfony/console": "~2.0|~3.0",
+                "symfony/yaml": "~2.0|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Bundle\\GaufretteBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The contributors",
+                    "homepage": "https://github.com/knplabs/KnpGaufretteBundle/contributors"
+                },
+                {
+                    "name": "Antoine Hérault",
+                    "email": "antoine.herault@gmail.com"
+                }
+            ],
+            "description": "Allows to easily use the Gaufrette library in a Symfony project",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2016-01-16T00:12:11+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -1253,6 +3440,174 @@
             "time": "2016-09-22T12:24:40+00:00"
         },
         {
+            "name": "mmoreram/extractor",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mmoreram/extractor.git",
+                "reference": "ec2200483d2dc27617e7bc4a41893dba79f58f14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mmoreram/extractor/zipball/ec2200483d2dc27617e7bc4a41893dba79f58f14",
+                "reference": "ec2200483d2dc27617e7bc4a41893dba79f58f14",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/finder": "^2.1|^3.0"
+            },
+            "suggest": {
+                "ext-phar": "For usage of Phar adapter",
+                "ext-rar": "For usage of Rar adapter",
+                "ext-zip": "For usage of Zip adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mmoreram\\Extractor\\": "src/Extractor"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                }
+            ],
+            "description": "Extractor project for php",
+            "keywords": [
+                "extractor",
+                "phar",
+                "php",
+                "rar",
+                "zip"
+            ],
+            "time": "2015-11-18T18:17:18+00:00"
+        },
+        {
+            "name": "mmoreram/simple-doctrine-mapping",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mmoreram/SimpleDoctrineMapping.git",
+                "reference": "58309688540f211b1c087ebe5979fc89674d4db2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mmoreram/SimpleDoctrineMapping/zipball/58309688540f211b1c087ebe5979fc89674d4db2",
+                "reference": "58309688540f211b1c087ebe5979fc89674d4db2",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.4",
+                "doctrine/orm": "~2.4",
+                "php": ">=5.4",
+                "symfony/dependency-injection": "^2.4|^3.0",
+                "symfony/http-kernel": "^2.4|^3.0"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.2",
+                "fabpot/php-cs-fixer": "1.4.2",
+                "mmoreram/php-formatter": "1.0.4",
+                "phpunit/phpunit": "4.5.0",
+                "symfony/framework-bundle": "^2.4.8|^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mmoreram\\SimpleDoctrineMapping\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                },
+                {
+                    "name": "SimpleDoctrineMapping Community",
+                    "homepage": "https://github.com/mmoreram/SimpleDoctrineMapping/contributors"
+                }
+            ],
+            "description": "Simple Doctrine Mapping ",
+            "homepage": "https://github.com/mmoreram/SimpleDoctrineMapping",
+            "keywords": [
+                "doctrine",
+                "mapping",
+                "mmoreram"
+            ],
+            "time": "2015-11-18T22:16:30+00:00"
+        },
+        {
+            "name": "mmoreram/symfony-bundle-dependencies",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mmoreram/symfony-bundle-dependencies.git",
+                "reference": "34b33b947558d1ab3a018f3de8255ecfc1135b01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mmoreram/symfony-bundle-dependencies/zipball/34b33b947558d1ab3a018f3de8255ecfc1135b01",
+                "reference": "34b33b947558d1ab3a018f3de8255ecfc1135b01",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|^7.0",
+                "symfony/http-kernel": "^2.2|^3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.11",
+                "mmoreram/php-formatter": "1.1.0",
+                "phpunit/phpunit": "4.8.19"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mmoreram\\SymfonyBundleDependencies\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Morera",
+                    "email": "yuhu@mmoreram.com"
+                }
+            ],
+            "description": "Dependencies resolver for Symfony Bundles",
+            "keywords": [
+                "bundle",
+                "dependencies",
+                "symfony"
+            ],
+            "time": "2015-12-10T19:34:00+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -1329,6 +3684,69 @@
                 "psr-3"
             ],
             "time": "2017-06-19T01:22:40+00:00"
+        },
+        {
+            "name": "ocramius/proxy-manager",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/ProxyManager.git",
+                "reference": "57e9272ec0e8deccf09421596e0e2252df440e11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/57e9272ec0e8deccf09421596e0e2252df440e11",
+                "reference": "57e9272ec0e8deccf09421596e0e2252df440e11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-code": ">2.2.5,<3.0"
+            },
+            "require-dev": {
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "1.5.*"
+            },
+            "suggest": {
+                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
+                "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
+                "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
+                "zendframework/zend-stdlib": "To use the hydrator proxy",
+                "zendframework/zend-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ProxyManager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
+            "homepage": "https://github.com/Ocramius/ProxyManager",
+            "keywords": [
+                "aop",
+                "lazy loading",
+                "proxy",
+                "proxy pattern",
+                "service proxies"
+            ],
+            "time": "2015-08-09T04:28:19+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1616,6 +4034,99 @@
                 "simple-cache"
             ],
             "time": "2017-01-02T13:31:39+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/62785ae604c8d69725d693eb370e1d67e94c4053",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2017-03-25T12:08:31+00:00"
+        },
+        {
+            "name": "sebastian/money",
+            "version": "v1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/money.git",
+                "reference": "80fbed3202d7c515386d1866b4c242ba417c284f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/money/zipball/80fbed3202d7c515386d1866b4c242ba417c284f",
+                "reference": "80fbed3202d7c515386d1866b4c242ba417c284f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": "^5.4|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Value Object that represents a monetary value (using a currency's smallest unit)",
+            "homepage": "http://www.github.com/sebastianbergmann/money",
+            "keywords": [
+                "money"
+            ],
+            "abandoned": "mathiasverraes/money",
+            "time": "2016-04-17T14:19:15+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -3158,6 +5669,112 @@
                 "templating"
             ],
             "time": "2017-09-27T18:06:46+00:00"
+        },
+        {
+            "name": "zendframework/zend-code",
+            "version": "2.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-code.git",
+                "reference": "95033f061b083e16cdee60530ec260d7d628b887"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/95033f061b083e16cdee60530ec260d7d628b887",
+                "reference": "95033f061b083e16cdee60530ec260d7d628b887",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || 7.0.0 - 7.0.4 || ^7.0.6",
+                "zendframework/zend-eventmanager": "^2.6 || ^3.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "^4.8.21",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev",
+                    "dev-develop": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Code\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "homepage": "https://github.com/zendframework/zend-code",
+            "keywords": [
+                "code",
+                "zf2"
+            ],
+            "time": "2016-04-20T17:26:42+00:00"
+        },
+        {
+            "name": "zendframework/zend-eventmanager",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-eventmanager.git",
+                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/5c80bdee0e952be112dcec0968bad770082c3a6e",
+                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "^0.1",
+                "container-interop/container-interop": "^1.1.0",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "^2.0",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
+            },
+            "suggest": {
+                "container-interop/container-interop": "^1.1.0, to use the lazy listeners feature",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\EventManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Trigger and listen to events within a PHP application",
+            "homepage": "https://github.com/zendframework/zend-eventmanager",
+            "keywords": [
+                "event",
+                "eventmanager",
+                "events",
+                "zf2"
+            ],
+            "time": "2016-02-18T20:53:00+00:00"
         }
     ],
     "packages-dev": [

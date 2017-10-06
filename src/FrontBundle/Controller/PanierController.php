@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
  * @author ronald
  */
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 class PanierController extends Controller
 {
     public function verficationAction()
@@ -21,5 +22,15 @@ class PanierController extends Controller
         $session = $this->container->get('front.emotion.session');
         dump($session);
         return new Response('Ok');
+    }
+
+    public function indexAction()
+    {
+        return $this->render('FrontBundle:Default:basket');
+    }
+
+    public function addAction(Product $product)
+    {
+        return $this->render('FrontBundle:Cart:vehicle.php', array('product' => $product));
     }
 }
