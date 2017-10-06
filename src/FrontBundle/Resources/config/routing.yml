@@ -28,3 +28,7 @@ payment_page:
 profile_page:
     path: /profile
     defaults: { _controller: FrontBundle:Default:profile}
+
+registration_page:
+    path: /registration
+    defaults: { _controller: FrontBundle:Default:registration}
