@@ -29,6 +29,10 @@ class DefaultController extends Controller
                     ->findUser($User,$em);
         }
         return $this->render('FrontBundle:Default:login.html.twig',['form'=>$form->createview()]);
+
+        return $this->redirectToRoute('homepage');
+
+
     }
     
      public function registrationAction()
@@ -50,5 +54,15 @@ class DefaultController extends Controller
     public function basketAction()
     {
         return $this->render('FrontBundle:Default:basket.html.twig');
+    }
+    public function paymentAction()
+    {
+        return $this->render('FrontBundle:Default:payment.html.twig');
+    }
+    
+
+    public function myprofileAction()
+    {
+        return $this->render('FrontBundle:Default:myprofile.html.twig');
     }
 }
