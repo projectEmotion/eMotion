@@ -10,17 +10,22 @@ class UserInscriptionType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('adress','text');
-        $builder->add('username','text',array('required' => true,'constraints'=>array(new Length(array('min' => 3)))));
-        $builder->add('firstName','text',array('required' => true,'constraints'=>array(new Length(array('min' => 2)))));
-        $builder->add('lastName','text');
-        $builder->add('email','text',array('required' => true,'constraints'=>array(new Email())));
-        $builder->add('plainPassword','text');
-        $builder->add('dateOfBirth','date');
-        $builder->add('phone','text');
-        $builder->add('codePostal','text');
-        $builder->add('ville','text');
-        $builder->add('numberLicence','text');
+        $attr = [
+                'class'=>'form-control margin-bottom-20'
+            ];
+        $builder->add('adress','text',[
+            'attr'=>$attr
+        ]);
+        $builder->add('username','text',array('attr'=>$attr,'required' => true,'constraints'=>array(new Length(array('min' => 3)))));
+        $builder->add('firstName','text',array('attr'=>$attr,'required' => true,'constraints'=>array(new Length(array('min' => 2)))));
+        $builder->add('lastName','text',['attr'=>$attr]);
+        $builder->add('email','text',array('attr'=>$attr,'required' => true,'constraints'=>array(new Email())));
+        $builder->add('plainPassword','text',['attr'=>$attr]);
+        $builder->add('dateOfBirth','date',['attr'=>['id'=>"example-date-input",'class'=>'form-control']]);
+        $builder->add('phone','text',['attr'=>$attr]);
+        $builder->add('codePostal','text',['attr'=>$attr]);
+        $builder->add('ville','text',['attr'=>$attr]);
+        $builder->add('numberLicence','text',['attr'=>$attr]);
     }
 
     public function getParent()
