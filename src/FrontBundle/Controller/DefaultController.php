@@ -61,8 +61,8 @@ class DefaultController extends Controller
     }
     
 
-    public function myprofileAction()
+    public function profileAction()
     {
-        return $this->render('FrontBundle:Default:myprofile.html.twig');
+        return $this->render('FrontBundle:Default:profile.html.twig');
     }
 }

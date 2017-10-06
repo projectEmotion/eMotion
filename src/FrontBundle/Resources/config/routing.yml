@@ -25,6 +25,6 @@ payment_page:
     defaults: { _controller: FrontBundle:Default:payment}
 
     
-myprofile_page:
-    path: /myprofile
-    defaults: { _controller: FrontBundle:Default:myprofile}
+profile_page:
+    path: /profile
+    defaults: { _controller: FrontBundle:Default:profile}
