@@ -1,174 +1,65 @@
-{# % trans_default_domain 'FOSUserBundle' %}
+{% trans_default_domain 'FOSUserBundle' %}
 
-{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+{# { form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
  {{ form_widget(form) }}
 {{ form_end(form) }}
     <div>
         <input type="submit" value="{{ 'registration.submit'|trans }}" />
-    </div>
-#}           
-<style>
-    a, a:hover{
-
-        text-decoration: none;
-    }
-    .no-padd{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    div.part1{
-        height: 595px;
-        text-align: center;
-        background:rgba(255, 255, 255, 0.45);
-        margin-top: 50px;
-    }
-    input.bouton{
-        max-width: 290px;
-        border:none;
-        background:transparent;
-    }
-    div.title{
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        font-size: 32px;
-        margin-top: 100px;
-    }
-    div.login{
-        margin-top: 40px;
-    }
-    div.btn{
-        border: none;
-        background-color: limegreen;
-        border-radius: 20% / 50%;
-        padding: 20px 40px;
-        color: #fff;
-        font-weight: bold;
-    }
-    div.input-email{
-        margin-bottom: 20px;
-    }
-    div.mot_de_passe{
-        margin-top: 50px;
-    }
-    div.button-connex{
-        margin-top: 40px;
-    }
-    button{
-        text-transform: uppercase;
-        font-weight:700;
-    }
-    div.bg-img{
-        height: 750px;
-        background: orange;
-        background-image: url(img/affiche01.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        -webkit-background-size: cover;
-        background-size: cover;
-
-    }
-    input{
-        width: 100%;}
-    div.header{
-        height: 80px;
-        background: rgba(0, 0, 0, 0.36);
-    }
-    div.menu{
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 30px;
-    }
-    @media (min-width: 992px) {
-
-        .part-r {
-            margin-top: 147px;;
-        }
-    }
-</style>
-{{form_errors(form)}}
-<div class="container-fluid no-padd">
-    <div class="bg-img">
-        <div class="header">
-            <div class="container">
-                <div class="menu">eMotion</div>
-                <div class="Links">
-                    <a href="/">Home</a>
-                    <a href="/admin">Admin</a>
-                    <a href="/register">Inscription</a>
-                </div>
-                <div class="container part1 col-md-12">
-                    <form action="{{ path('fos_user_registration_register') }}" method="post" class="fos_user_registration_register">
+    </div> #}
+<!--=== Content Part ===-->
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <form class="reg-page" action="{{path('fos_user_registration_register')}}" method="post">
+                    <div class="reg-header">
                         
-                        <div class="title">Inscription</div>
-                        <div class="col-md-3">
-                            <div class="login">
-                                <div class="input-email">
-                                    {{form_label(form.username)}}
-                                    {{form_errors(form.username)}}
-                                    {{form_widget(form.username)}}
-                                </div>
-                                <div class="input-email">
-                                    {{form_label(form.firstName)}}
-                                    {{form_widget(form.firstName)}}
-                                </div>
-                                <div class="input-email">
-                                    {{form_label(form.lastName)}}
-                                    {{form_widget(form.lastName)}}
-                                </div>
-                                <div class="input-email alert">
-                                    {{form_label(form.email)}}
-                                    {{form_errors(form.email)}}
-                                    {{form_widget(form.email)}}
-                                </div>
-                                <div class="input-email alert">
-                                    {{form_label(form.plainPassword)}}
-                                    {{form_widget(form.plainPassword)}}
-                                </div>
-                                <div class="input-email alert">
-                                    {{ form_row(form._token) }}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="login">
-                                <div class="input-email">
-                                    {{form_label(form.adress)}}
-                                    {{form_widget(form.adress)}}
-                                </div>
-                                <div class="input-email">
-                                    {{form_label(form.codePostal)}}
-                                    {{form_widget(form.codePostal)}}
-                                </div>
-                                <div class="input-email">
-                                    {{form_label(form.ville)}}
-                                    {{form_widget(form.ville)}}
-                                </div>
-                                <div class="input-email">
-                                    {{form_label(form.dateOfBirth)}}
-                                    {{form_widget(form.dateOfBirth)}}
-                                </div>
-                                <div class="input-email">
-                                    {{form_label(form.numberLicence)}}
-                                    {{form_widget(form.numberLicence)}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button-connex">
-                            <div class="btn"><input class="bouton" type="submit" value="{{ 'registration.submit'|trans }}" /></div>
-                        </div>
-                    </form>
-
-
-                    <div>
-
-
+                        <p>Déjà inscrit ? Cliquez sur <a href="login" class="color-green">Connexion</a> pour vous connecter.</p>
                     </div>
-                </div>
+
+                    <label>Username</label>
+                    {{ form_widget(form.username) }}
+                                      
+                    <label>Email Address <span class="color-red">*</span></label>
+                    {{ form_widget(form.email) }}
+
+                    <label>Password <span class="color-red">*</span></label>
+                    {{ form_widget(form.plainPassword) }}
+		    <label>Date de naissance</label>
+                    <div class="col-10">
+                        {{ form_widget(form.dateOfBirth) }}
+                    </div>
+		    <br>
+		    <label>Adresse</label>
+                    {{ form_widget(form.adress) }}
+		    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Ville </label>
+                            {{ form_widget(form.ville) }}
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Code postal</label>
+                            {{ form_widget(form.codePostal) }}
+                        </div>
+                    </div>
+		    <label>Téléphone</label>
+                    {{ form_widget(form.phone) }}
+		    <label>Licence</label>
+                    {{ form_widget(form.numberLicence) }}
+                    <hr>
+                    {{ form_widget(form._token) }}
+                    <div class="row">
+                        <div class="col-lg-6 checkbox">
+                            <label>
+                                <input type="checkbox"> 
+                                J'ai lu  <a href="page_terms.html" class="color-green">Les conditions générales</a>
+                            </label>                        
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <button class="btn-u" type="submit">S'inscrire</button>                        
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-
-</div>
+    </div><!--/container-->		
+    <!--=== End Content Part ===-->

@@ -1,131 +1,43 @@
 {% trans_default_domain 'FOSUserBundle' %}
-
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-
-<style>
-    a, a:hover{
-
-        text-decoration: none;
-    }
-    .no-padd{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    div.part1{
-        height: 430px;
-        text-align: center;
-        background:rgba(255, 255, 255, 0.45);
-        margin-top: 50px;
-    }
-    input{
-        max-width: 290px;
-    }
-    div.title{
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        font-size: 32px;
-        margin-top: 100px;
-    }
-    div.login{
-        margin-top: 40px;
-    }
-    div.btn{
-        border: none;
-        background-color: limegreen;
-        border-radius: 20% / 50%;
-        padding: 20px 40px;
-        color: #fff;
-        font-weight: bold;
-    }
-    div.input-email{
-        margin-bottom: 20px;
-    }
-    form input.input-email{
-        margin-bottom: 20px;
-    }
-    div.mot_de_passe{
-        margin-top: 50px;
-    }
-    div.button-connex{
-        margin-top: 40px;
-    }
-    button{
-        text-transform: uppercase;
-        font-weight:700;
-    }
-    div.bg-img{
-        height: 700px;
-        background: orange;
-        background-image: url(img/affiche01.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-    input{
-        width: 100%;}
-    div.header{
-        height: 80px;
-        background: rgba(0, 0, 0, 0.36);
-    }
-    div.menu{
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 30px;
-    }
-    input#_submit{
-        border:0;
-        background:transparent;
-    }
-</style>
-<body>
-<div class="container-fluid no-padd">
-    <div class="bg-img">
-        <div class="header">
-            <div class="container">
-                <div class="menu">eMotion</div>
-                <div class="Links"><a href="home.html">Home</a></div>
-                <div class="container part1 col-md-12">
-                    <div class="">
-                        <div class="title">Connexion</div>
-                        <form action="{{ path("fos_user_security_check") }}" method="post">
+ <!--=== Content Part ===-->
+    <div class="container">
+        {% if error %}
+            <div class="alert alert-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        <!--Reg Block-->
+        <div class="reg-block">
+            <div class="reg-block-header">
+                <h2>Connexion</h2>
+                <ul class="social-icons text-center">
+                </ul>
+                <p>Pas de compte ? <a class="color-green" href="registration">inscription</a> gratuite ici.</p>
+            </div>
+            <form action="{{ path("fos_user_security_check") }}" method="post">
                             {% if csrf_token %}
                                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
                             {% endif %}
-                        <div class="login">
-                            <div class="input-email">
-                                <label for="username">{{ 'security.login.username'|trans }}</label>
-                                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
-                            </div>
-                            <div class="input-pwd col-md-12">
-                                <label for="password">{{ 'security.login.password'|trans }}</label>
-                                <input type="password" id="password" name="_password" required="required" />
-                            </div>
+                        <div class="input-group margin-bottom-20">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="{{ 'security.login.username'|trans }}" class="form-control"/>
                         </div>
+                       <div class="input-group margin-bottom-20">
+                           <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                           <input type="password" id="password" name="_password" required="required" placeholder="{{ 'security.login.password'|trans }}" class="form-control"/>
+                       </div>
                         <div class="mot_de_passe">
-                            <a href="#">Mot de passe oublié ?</a>
+                            <a href="{{path('fos_user_resetting_request')}}">Mot de passe oublié ?</a>
                             <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
                             <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
                         </div>
-                        <div class="button-connex">
-                            <div class="btn"><input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" /></div>
+                        <div class="row button-connex">
+                            <div class="col-md-10 col-md-offset-1">
+                                <button type="submit" class="btn-u btn-block">{{ 'security.login.submit'|trans }}</button>
                         </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+            </form>
 
-</div>
-<div class="container-fluid">
+        </div>
+        <!--End Reg Block-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
 
-</div>
-
-
-</body>
