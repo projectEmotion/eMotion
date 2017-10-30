@@ -28,7 +28,7 @@ class DefaultController extends Controller
                     ->getRepository('AppBundle:User')
                     ->findUser($User,$em);
 
-            return $this->redirectToRoute('/');
+            return $this->redirectToRoute('/home');
         }
         return $this->render('FrontBundle:Default:login.html.twig',['form'=>$form->createview()]);
 
