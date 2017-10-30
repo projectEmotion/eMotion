@@ -1,11 +1,85 @@
-{% trans_default_domain 'FOSUserBundle' %}
 
-<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
-    <div>
-        <label for="username">{{ 'resetting.request.username'|trans }}</label>
-        <input type="text" id="username" name="username" required="required" />
+{% extends 'FrontBundle::Default/layout.html.twig' %}
+
+{% block body %}
+ <!--=== Content Part ===-->    
+<div class="container">
+    <!--Reg Block-->
+    <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+    <div class="reg-block">
+        <div class="reg-block-header">
+            <h2>Mot de passe oublié?</h2>
+            <ul class="social-icons text-center">
+            </ul>
+			<p>Saisissez votre e-mail. Nous vous enverrons un lien qui vous permettra de changer de mot de passe.</p>
+        </div>
+
+         <div class="input-group margin-bottom-20">
+             <span class="input-group-addon"><i class="fa fa-user"></i></span>
+             <input type="text" placeholder="Adresse e-mail" class="form-control" required="required" >
+         </div>
+
+        <hr>
+                                
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <button type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn-u btn-block">Envoyer le lien</button>
+            </div>
+        </div>
+	
+		
     </div>
-    <div>
-        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" />
-    </div>
-</form>
+        </form>
+    <!--End Reg Block-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
+{% endblock %}
+{% block javascripts %}
+
+
+<!-- JS Global Compulsory -->           
+<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
+<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script> 
+<!-- JS Implementing Plugins -->           
+<script src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
+<script src="{{ asset('assets/plugins/countdown/jquery.countdown.js') }}"></script>
+<script src="{{ asset('assets/plugins/backstretch/jquery.backstretch.min.js') }}"></script>
+<script type="text/javascript">
+    $.backstretch([
+      "assets/img/bg/5.jpg",
+      "assets/img/bg/4.jpg",
+      ], {
+        fade: 1000,
+        duration: 7000
+    });
+</script>
+<!-- JS Customization -->
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+<!-- JS Page Level -->           
+<script src="{{ asset('assets/js/app.js') }}"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();      
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="{{ asset('assets/plugins/respond.js') }}"></script>
+    <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
+<![endif]-->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29166220-1']);
+  _gaq.push(['_setDomainName', 'htmlstream.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+{% endblock  %}
