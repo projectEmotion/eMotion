@@ -50,7 +50,10 @@ class DefaultController extends Controller
 
     public function listvehicleAction()
     {
-        return $this->render('FrontBundle:Default:listvehicle.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $vehicle = $em->getRepository('AppBundle:Vehicle')
+                    ->findAll();
+        return $this->render('FrontBundle:Default:listvehicle.html.twig',array('vehicles'=>$vehicle));
     }
 
     public function basketAction()
