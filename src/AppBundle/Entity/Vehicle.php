@@ -403,8 +403,7 @@ class Vehicle
             return;
         }
         
-        $rootDir = realpath(__DIR__.'/../../../');
-        $fileDir = $rootDir.'/web/uploads/';
+        $fileDir = 'uploads/';
         
         $fileName = $this->getId().'-'.$this->getFile()->getClientOriginalName();
         
@@ -415,6 +414,7 @@ class Vehicle
             $fileDir,
             $fileName
         );
+        
         $this->setLink($fileDir.$fileName);
         $this->setFile(null);
     }

@@ -33,7 +33,9 @@ class VehiculeAdmin extends AbstractAdmin
                 'Voiture' => false,
             ),
         ));
-        $formMapper->add('file',FileType::class,['required' => FALSE]);
+        
+        $img = '<img src="/'.$this->getSubject()->getLink().'" height=100>';
+        $formMapper->add('file',FileType::class,['required' => FALSE,'help'=>$img,'label' => 'Image']);
     }
     
     protected function configureListFields(ListMapper $listMapper)
@@ -51,16 +53,4 @@ class VehiculeAdmin extends AbstractAdmin
         //$listMapper->addIdentifier('link');
         $listMapper->addIdentifier('id');
     }
-    
-    /*public function preValidate($object){
-        
-        /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file *
-        $file = $object->getFile();
-        
-        $uploadFile = $this->getConfigurationPool()->getContainer()->get('admin.upload.file');
-        if($uploadFile->upload($file)){
-            $object->setLink($uploadFile->getFileName());
-        }
-        dump($object);
-    }*/
 }
