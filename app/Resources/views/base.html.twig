@@ -62,9 +62,11 @@
                                 <li><a href="#">German</a></li>
                             </ul>
                         </li>
-                        {% if user is defined %}
+                        {% if (user is defined) and (user != NULL) %}
                             <li class="topbar-devider"></li>
-                            <li><a href="{{path('fos_user_security_login')}}">Logout</a></li>
+                            <li><a href="{{path('fos_user_security_logout')}}">Logout</a></li>
+                            <li class="topbar-devider"></li>
+                            <li><a href="{{path('fos_user_profile_show')}}">Profile</a></li>
                         {% else %}
                             <li class="topbar-devider"></li>
                             <li><a href="{{path('fos_user_registration_register')}}">INSCRIPTION</a></li>
@@ -100,7 +102,7 @@
 
                             <!-- Location -->
                             <li>
-                                <a href="listvehicle">
+                                <a href="{{path('listvehicle_page')}}">
                                     Location de vehicule
                                 </a>
                             </li>

@@ -13,7 +13,8 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        return $this->render('FrontBundle:Default:home.html.twig');
+        $user = $this->getUser();
+        return $this->render('FrontBundle:Default:home.html.twig',['user'=>$user]);
     }
     
     public function loginAction(Request $req)
@@ -50,10 +51,11 @@ class DefaultController extends Controller
 
     public function listvehicleAction()
     {
+        $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
         $vehicle = $em->getRepository('AppBundle:Vehicle')
                     ->findAll();
-        return $this->render('FrontBundle:Default:listvehicle.html.twig',array('vehicles'=>$vehicle));
+        return $this->render('FrontBundle:Default:listvehicle.html.twig',array('vehicles'=>$vehicle,'user'=>$user));
     }
 
     public function basketAction()
