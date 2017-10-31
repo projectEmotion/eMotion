@@ -1,156 +1,223 @@
 {% trans_default_domain 'FOSUserBundle' %}
-<style>
-    a, a:hover{
 
-        text-decoration: none;
-    }
-    .no-padd{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    div.part1{
-        height: 540px;
-        text-align: center;
-        background:rgba(255, 255, 255, 0.45);
-        margin-top: 50px;
-    }
-    input.bouton{
-        max-width: 290px;
-        border:none;
-        background:transparent;
-    }
-    div.title{
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        font-size: 32px;
-        margin-top: 100px;
-    }
-    div.login{
-        margin-top: 40px;
-    }
-    div.btn{
-        border: none;
-        background-color: limegreen;
-        border-radius: 20% / 50%;
-        padding: 20px 40px;
-        color: #fff;
-        font-weight: bold;
-    }
-    div.input-email{
-        margin-bottom: 20px;
-    }
-    div.mot_de_passe{
-        margin-top: 50px;
-    }
-    div.button-connex{
-        margin-top: 40px;
-    }
-    button{
-        text-transform: uppercase;
-        font-weight:700;
-    }
-    div.bg-img{
-        height: 700px;
-        background: orange;
-        background-image: url(img/affiche01.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        -webkit-background-size: cover;
-        background-size: cover;
+<!--=== Profile ===-->
+    <div class="profile container content">
+    	<div class="row">
+            <!--Left Sidebar-->
+            <div class="col-md-3 md-margin-bottom-40">
+                <img class="img-responsive profile-img margin-bottom-20" src="{{ asset('assets/img/user.jpg') }}" alt="">
 
-    }
-    input{
-        width: 100%;}
-    div.header{
-        height: 80px;
-        background: rgba(0, 0, 0, 0.36);
-    }
-    div.menu{
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 30px;
-    }
-    @media (min-width: 992px) {
-
-        .part-r {
-            margin-top: 147px;;
-        }
-    }
-</style>
-<div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-</div>
-
-
-<div class="container-fluid no-padd">
-    <div class="bg-img">
-        <div class="header">
-            <div class="container">
-                <div class="menu">eMotion</div>
-                <div class="Links"><a href="home.html">Home</a></div>
-                <div class="container part1 col-md-12">
-                    <div class="col-md-6">
-                        <div class="title">Mon Profil</div>
-                        <div class="login">
-                            <div class="input-email">
-
-                                <p>Username: {{ user.username }}</p>
-                            </div>
-                            <div class="input-email">
-
-                                <p>Prénom: {{ user.firstName }}</p>
-                            </div>
-                            <div class="input-email">
-
-                                <p>Nom: {{ user.lastName }}</p>
-                            </div>
-
-                            <div class="input-email">
-                                <p>E-mail: {{ user.email }}</p>
-
-                            </div>
-                            <div class="input-pwd col-md-12">
-                                <p>Numéro de permis: {{ user.numberLicence }}</p>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col-md-6 part-r">
-
-                        <div class="login">
-
-                            <div class="input-email">
-                                <p>Adresse: {{ user.adress }}</p>
-                                <p>Code Postal: {{ user.codePostal }}</p>
-                                <p>Ville: {{ user.ville }}</p>
-                            </div>
-                            <div class="input-email">
-                                <p>Téléphone: {{ user.phone }}</p>
-                            </div>
-                            <div class="input-email">
-                                <p>Date de naissance: {{ user.dateOfBirth | date }}</p>
-                            </div>
-                            <div class="input-pwd col-md-12">
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                </div>
+                <ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
+                    <li class="list-group-item active">
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> Overall</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#"><i class="fa fa-user"></i> Profile</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#"><i class="fa fa-group"></i> Users</a>
+                    </li>                                        
+                    <li class="list-group-item">
+                        <a href="#"><i class="fa fa-comments"></i> Comments</a>
+                    </li>                                        
+                    <li class="list-group-item">
+                        <a href="#"><i class="fa fa-history"></i> History</a>
+                    </li>                                       
+                    <li class="list-group-item">
+                        <a href="#"><i class="fa fa-cog"></i> Settings</a>
+                    </li> 
+                </ul>   
             </div>
-        </div>
-    </div>
+            <!--End Left Sidebar-->
+            
+            <div class="col-md-9">
+                <!--Profile Body-->
+                <div class="profile-body">
+                    <div class="row">
+                                <div class="col-md-5">
+                                    <img class="img-responsive md-margin-bottom-10" src="{{ asset('assets/img/user.jpg') }}" alt="">
+                                    <a class="btn-u btn-u-sm" href="#">Change Picture</a>
+                                </div>
+                                <div class="col-md-7">
+                                    <h2>{{user.getUserName()}}</h2>
+                                    <span><strong>firstName: {{user.getFirstName()}}</strong>&nbsp;&nbsp;&nbsp;</span>
+                                    <span><strong>lastName: {{user.getLastName()}}</strong></span>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p>
+                                    <p>Proin mauris odio, pharetra quis ligula non, vulputate vehicula quam. Nunc in libero vitae nunc ultricies tincidunt ut sed leo. Sed luctus dui ut congue consequat. Cras consequat nisl ante, nec malesuada velit pellentesque ac. Pellentesque nec arcu in ipsum iaculis convallis.</p>
+                                </div>
+                            </div> 
+							
+							<!--Timeline-->
+                        <div class="panel panel-profile">
+                            <div class="panel-heading overflow-h">
+                                <h2 class="panel-title heading-sm pull-left"><i class="fa fa-car"></i> Réservation</h2>
+                                <a href="#"><i class="fa fa-cog pull-right"></i></a>
+                            </div>
+                            <div class="panel-body margin-bottom-40">
+                                <ul class="timeline-v2 timeline-me">
+                                    <li>
+                                        <time datetime="" class="cbp_tmtime"><span>xxxxx</span> <span>2012 - Current</span></time>
+                                        <i class="cbp_tmicon rounded-x hidden-xs"></i>
+                                        <div class="cbp_tmlabel">
+                                            <h2>Vehicule</h2>
+                                            <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Peasprouts wattle seed rutabaga okra yarrow cress avocado grape.</p> 
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>    
+                        </div>
+                        <!--End Timeline-->
+                  
+                </div>
+                <!--End Profile Body-->
+            </div>
+        </div><!--/end row-->
+    </div><!--/container-->    
+    <!--=== End Profile ===-->
 
-</div>
-<div class="container-fluid">
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <a href="home"><img id="logo-footer" class="footer-logo" src="{{ asset('assets/img/logo2-default.png') }}" alt=""></a>
+                        <p>Bienvenue sur le service de recherche de location de voiture proposé par eMotion. Nous offrons des milliers d'offres de location de voiture et moto électrique pour vous aider à trouver le meilleur prix.</p>
+                        <p>Ainsi,nous vous aidons à organiser votre voyage et vous économisez de l’argent. Prenez la route avec nous.</p>    
+                    </div><!--/col-md-3-->
+                    <!-- End About -->
+					
+					
+                       <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                           
+                        </div>
+                    </div>
+                    <!-- End Latest --> 
+					
+					
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline"><h2>Liens</h2></div>
+                        <ul class="list-unstyled link-list">
+                            <li><a href="#">Blog</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">Régles</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">Recrutement</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">Contactez nous</a><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->                    
 
-</div>
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline"><h2>Contactez-nous</h2></div>                         
+                        <address class="md-margin-bottom-40">
+                            25, Rue de la paix <br />
+                            75002 Paris <br />
+                            Téléphone: 09 47 51 25 36 <br />
+                            Email: <a href="mailto:contact@emotion.fr" class="">contact@emotion.fr</a>
+                        </address>
+                    </div><!--/col-md-3-->
+                    <!-- End Address -->
+                </div>
+            </div> 
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">                     
+                        <p>
+                            2017 &copy; All Rights Reserved.
+                           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-md-6">
+                        <ul class="footer-socials list-inline">
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                    <i class="fa fa-skype"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social Links -->
+                </div>
+            </div> 
+        </div><!--/copyright-->
+    </div>     
+    <!--=== End Footer Version 1 ===-->
+<!--/wrapper-->
+
+<!-- JS Global Compulsory -->			
+<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/plugins/jquery/jquery-migrate.min.js') }}"></script>
+<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+<!-- JS Implementing Plugins -->
+<script src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
+<script src="{{ asset('assets/plugins/circles-master/circles.js') }}"></script>
+<!-- Datepicker Form -->
+<script src="{{ asset('assets/plugins/sky-forms/version-2.0.1/js/jquery-ui.min.js') }}"></script>
+<!-- Scrollbar -->
+<script src="{{ asset('assets/plugins/scrollbar/src/jquery.mousewheel.js') }}"></script>
+<script src="{{ asset('assets/plugins/scrollbar/src/perfect-scrollbar.js') }}"></script>
+<!-- JS Customization -->
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+<!-- JS Page Level -->           
+<script src="{{ asset('assets/js/app.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/datepicker.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/circles-master.js') }}"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        Datepicker.initDatepicker();
+        CirclesMaster.initCirclesMaster1();      
+    });
+</script>
+<script>
+    jQuery(document).ready(function ($) {
+        "use strict";
+        $('.contentHolder').perfectScrollbar();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="{{ asset('assets/plugins/respond.js') }}"></script>
+    <script src="{{ asset('assets/plugins/html5shiv.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/placeholder-IE-fixes.js') }}"></script>
+<![endif]-->
 

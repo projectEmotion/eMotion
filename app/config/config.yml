@@ -72,6 +72,8 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
+    encryption: ssl
+    auth_mode: login
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
@@ -87,6 +89,11 @@ fos_user:
     registration:
         form:
             type: FrontBundle\Form\UserInscriptionType
+    resetting:
+        email:
+            from_email:
+                address:        ronaldrlrj.123@gmail.com
+                sender_name:    Demo Resetting
     
 sonata_block:
     default_contexts: [cms]

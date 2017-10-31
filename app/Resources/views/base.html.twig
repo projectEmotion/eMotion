@@ -62,10 +62,15 @@
                                 <li><a href="#">German</a></li>
                             </ul>
                         </li>
-                        <li class="topbar-devider"></li>
-                        <li><a href="{{path('fos_user_registration_register')}}">INSCRIPTION</a></li>
-                        <li class="topbar-devider"></li>
-                        <li><a href="{{path('fos_user_security_login')}}">CONNEXION</a></li>
+                        {% if user is defined %}
+                            <li class="topbar-devider"></li>
+                            <li><a href="{{path('fos_user_security_login')}}">Logout</a></li>
+                        {% else %}
+                            <li class="topbar-devider"></li>
+                            <li><a href="{{path('fos_user_registration_register')}}">INSCRIPTION</a></li>
+                            <li class="topbar-devider"></li>
+                            <li><a href="{{path('fos_user_security_login')}}">CONNEXION</a></li>
+                        {% endif %}
                         <li class="topbar-devider"></li>
                         <li><a href="basket">PANIER</a></li>
 
@@ -95,7 +100,7 @@
 
                             <!-- Location -->
                             <li>
-                                <a href="/listvehicle">
+                                <a href="listvehicle">
                                     Location de vehicule
                                 </a>
                             </li>
