@@ -6,6 +6,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class VehiculeAdmin extends AbstractAdmin
 {
@@ -32,7 +33,7 @@ class VehiculeAdmin extends AbstractAdmin
                 'Voiture' => false,
             ),
         ));
-        $formMapper->add('link','url');
+        $formMapper->add('file',FileType::class,['required' => FALSE]);
     }
     
     protected function configureListFields(ListMapper $listMapper)
@@ -47,7 +48,19 @@ class VehiculeAdmin extends AbstractAdmin
         $listMapper->addIdentifier('price_of_purchase');
         $listMapper->addIdentifier('availability');
         $listMapper->addIdentifier('vehicle_type');
-        $listMapper->addIdentifier('link');
+        //$listMapper->addIdentifier('link');
         $listMapper->addIdentifier('id');
     }
+    
+    /*public function preValidate($object){
+        
+        /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file *
+        $file = $object->getFile();
+        
+        $uploadFile = $this->getConfigurationPool()->getContainer()->get('admin.upload.file');
+        if($uploadFile->upload($file)){
+            $object->setLink($uploadFile->getFileName());
+        }
+        dump($object);
+    }*/
 }

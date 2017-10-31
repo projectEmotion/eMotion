@@ -72,4 +72,6 @@ AppBundle\Entity\Vehicle:
             options:
                 fixed: false
             column: Link
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks:
+        prePersist:   [ lifecycleFileUpload ]
+        preUpdate:    [ lifecycleFileUpload ]

@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Vehicle
@@ -97,7 +98,11 @@ class Vehicle
      * @ORM\Column(name="link", type="string", length=255, nullable=true)
      */
      private $link;
-
+     
+     /**
+      * 
+      */
+     private $file;
     /**
      * Get id
      *
@@ -121,7 +126,7 @@ class Vehicle
 
         return $this;
     }
-
+    
     /**
      * Get brand
      *
@@ -351,7 +356,7 @@ class Vehicle
       /**
      * Set link
      *
-     * @param string $link
+     * @param file $link
      *
      * @return Vehicle
      */
@@ -365,10 +370,52 @@ class Vehicle
      /**
       * Get link
       *
-      * @return string
+      * @return file
       */
      public function getLink()
      {
          return $this->link;
      }
+     
+     /**
+    * Sets file.
+    *
+    * @param UploadedFile $file
+    */
+    public function setFile(UploadedFile $file = null)
+    {
+       $this->file = $file;
+    }
+    
+    /**
+    * Get file.
+    *
+    * @return UploadedFile
+    */
+    public function getFile()
+    {
+        return $this->file;
+    }
+    
+    public function lifecycleFileUpload()
+    {
+        if(is_null($this->getFile())){
+            return;
+        }
+        
+        $rootDir = realpath(__DIR__.'/../../../');
+        $fileDir = $rootDir.'/web/uploads/';
+        
+        $fileName = $this->getId().'-'.$this->getFile()->getClientOriginalName();
+        
+        if(!empty($this->getLink())){
+            unlink($this->getLink());
+        }
+        $this->getFile()->move(
+            $fileDir,
+            $fileName
+        );
+        $this->setLink($fileDir.$fileName);
+        $this->setFile(null);
+    }
 }
