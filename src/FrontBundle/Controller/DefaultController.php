@@ -70,6 +70,11 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:profile.html.twig');
     }
+    
+        public function edit_contentAction()
+    {
+        return $this->render('FOSUserBundle:Profile:edit_content.html.twig');
+    }
  
     
 }

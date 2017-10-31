@@ -32,3 +32,7 @@ profile_page:
 registration_page:
     path: /registration
     defaults: { _controller: FrontBundle:Default:registration}
+
+edit_content:
+    path: /edit_content
+    defaults: { _controller: FrontBundle:Default:edit_content}
