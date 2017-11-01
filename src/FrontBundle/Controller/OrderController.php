@@ -34,7 +34,8 @@ class OrderController extends Controller
      */
     public function checkoutAction(Request $request)
     {
-        \Stripe\Stripe::setApiKey("SK_PUBLIC_TEST_API");
+
+        \Stripe\Stripe::setApiKey("sk_test_R5Nro9XcIeikCo92YEP4beyW");
 
         // Get the credit card details submitted by the form
         $token = $_POST['stripeToken'];

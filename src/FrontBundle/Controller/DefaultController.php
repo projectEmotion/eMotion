@@ -77,6 +77,10 @@ class DefaultController extends Controller
     {
         return $this->render('FOSUserBundle:Profile:edit_content.html.twig');
     }
+
+
+
+
  
     
 }
