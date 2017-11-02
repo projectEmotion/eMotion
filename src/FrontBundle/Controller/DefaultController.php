@@ -7,6 +7,8 @@ use Symfony\Component\HttpFoundation\Request;
 use FrontBundle\Form\LoginType;
 use FrontBundle\Form\ReservationType;
 use AppBundle\Entity\User;
+use Symfony\Component\HttpFoundation\Response;
+
 
 
 class DefaultController extends Controller
@@ -126,7 +128,29 @@ class DefaultController extends Controller
         return $this->render('FOSUserBundle:Profile:edit_content.html.twig');
     }
 
+    public function factureAction()
+    {
+        $user = $this->getUser();
+        $commande = $this->getCommande();
+        
+        $snappy = $this->get('knp_snappy.pdf');
+        
+        $html = $this->renderView('FrontBundle:Default:facture.html.twig', array(
+            'user' => $user,
+        ));
+        
+        $filename = 'Facture';
 
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"',
+                '--user-style-sheet'      =>  'assets/css/pdf.css' 
+            )
+        );
+    }
 
 
  
