@@ -44,7 +44,7 @@ class DefaultController extends Controller
     }
 
     
-    public function bookingAction()
+    public function bookingAction($vehiculeId)
     {
         return $this->render('FrontBundle:Default:booking.html.twig');
     }

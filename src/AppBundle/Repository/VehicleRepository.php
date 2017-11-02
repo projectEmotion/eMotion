@@ -10,4 +10,11 @@ namespace AppBundle\Repository;
  */
 class VehicleRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getMarques()
+    {
+        $em = $this->getEntityManager();
+        $qb = $em->createQuery('SELECT v.brand FROM AppBundle:Vehicle v GROUP BY v.brand');
+        return $qb->getResult();     
+        //return $query->getQuery()->getResult();
+    }
 }

@@ -32,19 +32,12 @@
                                       
 						<div class="form-group">			  
                     <label>Marque</label>
-                    <select class="form-control" >
-                        <option value="BMW" selected>BMW</option>
-                        <option value="Ford">Ford</option>
-                        <option value="LandRover">Land Rover</option>
-                        <option value="Ducati">Ducati</option>
-                        <option value="Ktm">KTM</option>
-                        <option value="Suzuki">Suzuki</option>                        
-                    </select>
+                    <input class="form-control" type="text" value="{{vehicle.getBrand()}}" readonly>
 				</div>
                     <div class="row">
                         <div class="col-sm-12">    
                             <label>Modèle</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" value="{{vehicle.getModel()}}" readonly>
                         </div>
                     </div>
                     <div class="row">

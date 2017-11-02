@@ -1,6 +1,7 @@
 AppBundle\Entity\Vehicle:
     type: entity
     table: vehicle
+    repositoryClass: AppBundle\Repository\VehicleRepository
     id:
         id:
             type: integer

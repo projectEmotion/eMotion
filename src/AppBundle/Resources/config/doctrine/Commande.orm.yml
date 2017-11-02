@@ -1,0 +1,23 @@
+AppBundle\Entity\Commande:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommandeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idUser:
+            type: object
+            column: id_user
+        idVehicule:
+            type: object
+            column: id_vehicule
+        prix:
+            type: float
+        dateAchat:
+            type: datetime
+            column: date_achat
+    lifecycleCallbacks: {  }
