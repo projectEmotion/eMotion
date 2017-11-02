@@ -73,6 +73,7 @@ class DefaultController extends Controller
     
         public function edit_contentAction()
     {
+        $form = $this->createForm(PostType::class, $post);
         return $this->render('FOSUserBundle:Profile:edit_content.html.twig');
     }
  

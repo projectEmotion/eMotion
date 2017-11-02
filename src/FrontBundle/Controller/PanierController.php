@@ -33,4 +33,5 @@ class PanierController extends Controller
     {
         return $this->render('FrontBundle:Cart:vehicle.php', array('product' => $product));
     }
+    
 }
