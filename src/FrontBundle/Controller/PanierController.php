@@ -24,9 +24,14 @@ class PanierController extends Controller
         return new Response('Ok');
     }
 
-    public function indexAction()
+    public function indexAction($session)
     {
         return $this->render('FrontBundle:Default:basket');
+    }
+    
+    public function afficheAction()
+    {
+        return $this->render('FrontBundle:Default:basket.html.twig');
     }
 
     public function addAction(Product $product)

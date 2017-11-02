@@ -5,7 +5,9 @@ namespace FrontBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use FrontBundle\Form\LoginType;
+use FrontBundle\Form\ReservationType;
 use AppBundle\Entity\User;
+
 
 class DefaultController extends Controller
 {
@@ -44,14 +46,60 @@ class DefaultController extends Controller
     }
 
     
-    public function bookingAction($vehiculeId)
+    public function bookingAction($vehiculeId,Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $vehicleBrands = $em->getRepository('AppBundle:Vehicle')
-                ->getMarques();
         $CurrentVehicle = $em->getRepository('AppBundle:Vehicle')
                     ->findById($vehiculeId);
-        return $this->render('FrontBundle:Default:booking.html.twig',['vehicle'=>$CurrentVehicle[0]]);
+        $reservation = new \AppBundle\Entity\Reservation();
+        $reservation->setIdVehicle($CurrentVehicle[0]);
+        $form = $this->createForm(ReservationType::class,$reservation);
+        
+        $formError = '';
+        
+        if($request->getMethod() == 'POST'){
+            $form->handleRequest($request);
+            
+            $today = new \DateTime();
+            $dateVerif = false;
+            
+            if($reservation->getStartDate() >= $today){
+                if($reservation->getEndDate()>$reservation->getStartDate()){
+                    $dateVerif = true;
+                }else{
+                    $formError = 'Date de restitution doit etre superire à Date de prise ';
+                    $dateVerif = false;
+                }
+            }else{
+                $formError = 'Date de prise doit etre superire à auj ';
+                $dateVerif = false;
+            }
+            
+            if($dateVerif)
+            {
+                if(!$this->Session()->addToCart($reservation)){
+                    $formError = 'Vous avez déja reserver cette vehicule';
+                }else
+                {
+                    $this->forward('FrontBundle:Panier:index', array(
+                        'name'  => $name,
+                        'color' => 'green',
+                    ));
+                }
+                
+            }
+        }
+        
+        
+        return $this->render('FrontBundle:Default:booking.html.twig',['vehicle'=>$CurrentVehicle[0],'form'=>$form->createView(),'error'=>$formError]);
+    }
+    
+    public function Session()
+    {
+        $frontSession = $this->get('front.session');
+        $frontSession->initiate($this->get('session'));
+        
+        return $frontSession;
     }
 
     public function listvehicleAction()
@@ -72,7 +120,6 @@ class DefaultController extends Controller
         return $this->render('FrontBundle:Default:payment.html.twig');
     }
     
-
     public function profileAction()
     {
         return $this->render('FrontBundle:Default:profile.html.twig');
