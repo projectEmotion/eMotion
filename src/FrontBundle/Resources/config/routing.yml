@@ -31,3 +31,11 @@ registration_page:
 edit_content:
     path: /edit_content
     defaults: { _controller: FrontBundle:Default:edit_content}
+
+prepare_page:
+    path: /prepare
+    defaults: { _controller: FrontBundle:Order:prepare}
+
+order_checkout:
+    path: /checkout
+    defaults: { _controller: FrontBundle:Order:checkout}

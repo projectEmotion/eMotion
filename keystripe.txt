@@ -1,0 +1,4 @@
+Publishable key
+pk_test_LRiFze7qre4alwIITSw4KQlV
+Secret key
+sk_test_R5Nro9XcIeikCo92YEP4beyW
