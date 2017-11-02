@@ -1,24 +1,48 @@
 <?php
 
-namespace FrontBundle\Services;
+namespace FrontBundle\Service;
 
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use AppBundle\Entity\Reservation;
 class FrontSession 
 {
     private $session;
     
-    public function __construct()
+    public function initiate(Session $session)
     {
-        $this->session = new Session();
+        $this->session = $session;
     }
     
-    protected function setUser(User $user)
+    public function getSessionInfo()
     {
-        $this->session->set('user',$user);
+        return $this->session;
     }
     
-    protected function getUser()
+    public function addToCart(Reservation $reservation)
     {
-        return $this->session->get('user');
+        $cart = $this->getCart();
+        if(!is_null($cart)){
+            foreach ($cart as $c){
+                if($reservation->getIdVehicle() == $c->getIdVehicle()){
+                    return false;
+                }
+            }
+        }
+        $cart[] = $reservation;
+        $this->session->set('cart',$cart);
+        return true;
+    }
+    
+    public function getCart()
+    {
+        return $this->session->get('cart');
+    }
+    
+    
+
+    public function removeFromCart()
+    {
+        return $this->session->remove('cart');
     }
 }

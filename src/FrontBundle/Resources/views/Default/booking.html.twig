@@ -18,164 +18,78 @@
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
+    <style>
+        #reservation_startDate_time,#reservation_endDate_time{
+            padding-top: 24px;
+        }
+        #reservation_startDate_time select,#reservation_endDate_time select{
+            height: 35px;
+        }
+        .row{
+            margin: 10px 0;
+        }
+    </style>
     <div class="container content">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page">
-                 <div class="form-group">
-                    <label>Type de vehicule</label>
-                    <select class="form-control" id="vehicl_type" >
-                     <option value="car" selected>Voiture</option>
-                     <option value="moto"> Scooter</option>
-                 </select>
-				 </div>
-                                      
-						<div class="form-group">			  
-                    <label>Marque</label>
-                    <input class="form-control" type="text" value="{{vehicle.getBrand()}}" readonly>
-				</div>
+                {%if error != ''%}
+                    <ul class="row">
+                        <li>{{error}}</li>
+                    </ul>
+                {%endif%}
+                <div class="row">
+                    <div class="col-sm-6">
+                        <b>Type de vehicule</b>
+                    </div>
+                    <div class="col-sm-6">
+                        <b>Voiture</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <b>Marque</b>
+                    </div>
+                    <div class="col-sm-6">
+                        <b>{{vehicle.getBrand()}}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <b>Modèle</b>
+                    </div>
+                    <div class="col-sm-6">
+                        <b>{{vehicle.getModel()}}</b>
+                    </div>
+                </div>
+                <form action="{{path('booking_page',{'vehiculeId':vehicle.id})}}" method="POST">
                     <div class="row">
-                        <div class="col-sm-12">    
-                            <label>Modèle</label>
-                            <input class="form-control" type="text" value="{{vehicle.getModel()}}" readonly>
-                        </div>
+                            <div class="col-sm-6">
+                                {{ form_label(form.startDate) }}
+                                {{ form_widget(form.startDate.date,{ 'attr' : { 'class': 'form-control' } }) }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.startDate.time) }}
+                            </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <label>Date de prise en charge</label>
-                            <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
-                        </div>
-						
-                        <div class="col-sm-6">
-                            <label>Heure</label> </br>
-                            <select style="height:35px;">										
-											<option  value="00:00">00:00</option>										
-											<option  value="00:30">00:30</option>										
-											<option  value="01:00">01:00</option>										
-											<option  value="01:30">01:30</option>										
-											<option  value="02:00">02:00</option>										
-											<option  value="02:30">02:30</option>										
-											<option  value="03:00">03:00</option>										
-											<option  value="03:30">03:30</option>										
-											<option  value="04:00">04:00</option>										
-											<option  value="04:30">04:30</option>										
-											<option  value="05:00">05:00</option>										
-											<option  value="05:30">05:30</option>										
-											<option  value="06:00">06:00</option>										
-											<option  value="06:30">06:30</option>										
-											<option  value="07:00">07:00</option>										
-											<option  value="07:30">07:30</option>										
-											<option  value="08:00">08:00</option>										
-											<option  value="08:30">08:30</option>										
-											<option  value="09:00">09:00</option>										
-											<option  value="09:30">09:30</option>										
-											<option selected value="10:00">10:00</option>
-											<option  value="10:30">10:30</option>										
-											<option  value="11:00">11:00</option>										
-											<option  value="11:30">11:30</option>
-											<option  value="12:00">12:00</option>
-											<option  value="12:30">12:30</option>
-											<option  value="13:00">13:00</option>
-											<option  value="13:30">13:30</option>
-											<option  value="14:00">14:00</option>
-											<option  value="14:30">14:30</option>
-											<option  value="15:00">15:00</option>
-											<option  value="15:30">15:30</option>
-											<option  value="16:00">16:00</option>
-											<option  value="16:30">16:30</option>
-											<option  value="17:00">17:00</option>
-											<option  value="17:30">17:30</option>
-											<option  value="18:00">18:00</option>
-											<option  value="18:30">18:30</option>
-											<option  value="19:00">19:00</option>
-											<option  value="19:30">19:30</option>
-											<option  value="20:00">20:00</option>
-											<option  value="20:30">20:30</option>
-											<option  value="21:00">21:00</option>
-											<option  value="21:30">21:30</option>
-											<option  value="22:00">22:00</option>
-											<option  value="22:30">22:30</option>
-											<option  value="23:00">23:00</option>
-											<option  value="23:30">23:30</option>
-									</select>
-
-                        </div>
+                            <div class="col-sm-6">
+                                {{ form_label(form.endDate) }}
+                                {{ form_widget(form.endDate.date,{ 'attr' : { 'class': 'form-control' } }) }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.endDate.time) }}
+                            </div>
                     </div>
-					</br>
-					<div class="row">
-                        <div class="col-sm-6">
-                            <label>Date de restitution</label>
-                            <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>Heure</label> </br>
-                            <select style="height:35px;">										
-											<option  value="00:00">00:00</option>										
-											<option  value="00:30">00:30</option>										
-											<option  value="01:00">01:00</option>										
-											<option  value="01:30">01:30</option>										
-											<option  value="02:00">02:00</option>										
-											<option  value="02:30">02:30</option>										
-											<option  value="03:00">03:00</option>										
-											<option  value="03:30">03:30</option>										
-											<option  value="04:00">04:00</option>										
-											<option  value="04:30">04:30</option>										
-											<option  value="05:00">05:00</option>										
-											<option  value="05:30">05:30</option>										
-											<option  value="06:00">06:00</option>										
-											<option  value="06:30">06:30</option>										
-											<option  value="07:00">07:00</option>										
-											<option  value="07:30">07:30</option>										
-											<option  value="08:00">08:00</option>										
-											<option  value="08:30">08:30</option>										
-											<option  value="09:00">09:00</option>										
-											<option  value="09:30">09:30</option>										
-											<option selected value="10:00">10:00</option>
-											<option  value="10:30">10:30</option>										
-											<option  value="11:00">11:00</option>										
-											<option  value="11:30">11:30</option>
-											<option  value="12:00">12:00</option>
-											<option  value="12:30">12:30</option>
-											<option  value="13:00">13:00</option>
-											<option  value="13:30">13:30</option>
-											<option  value="14:00">14:00</option>
-											<option  value="14:30">14:30</option>
-											<option  value="15:00">15:00</option>
-											<option  value="15:30">15:30</option>
-											<option  value="16:00">16:00</option>
-											<option  value="16:30">16:30</option>
-											<option  value="17:00">17:00</option>
-											<option  value="17:30">17:30</option>
-											<option  value="18:00">18:00</option>
-											<option  value="18:30">18:30</option>
-											<option  value="19:00">19:00</option>
-											<option  value="19:30">19:30</option>
-											<option  value="20:00">20:00</option>
-											<option  value="20:30">20:30</option>
-											<option  value="21:00">21:00</option>
-											<option  value="21:30">21:30</option>
-											<option  value="22:00">22:00</option>
-											<option  value="22:30">22:30</option>
-											<option  value="23:00">23:00</option>
-											<option  value="23:30">23:30</option>
-									</select>
-
-                        </div>
-                    </div>
-					
-                    <hr>
-                    
-                        
                     <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <button class="btn-u" type="submit">Reserver</button>                        
-                        </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <button class="btn-u" type="submit">Reserver</button>                        
+                            </div>
                     </div>
-
                 </form>
             </div>
+            </div>
         </div>
-    </div><!--/container-->		
+    </div><!--/container-->	
     <!--=== End Content Part ===-->
 
     <!--=== Footer Version 1 ===-->

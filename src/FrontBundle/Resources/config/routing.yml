@@ -17,7 +17,7 @@ listvehicle_page:
 
 basket_page:
     path: /basket
-    defaults: { _controller: FrontBundle:Default:basket}
+    defaults: { _controller: FrontBundle:Panier:affiche}
 
 
 payment_page:

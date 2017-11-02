@@ -1,6 +1,8 @@
 services:
     front.custom_mailer:
         class: FrontBundle\FosUserMailer
+    front.session:
+        class: FrontBundle\Service\FrontSession
 #    front.example:
 #        class: FrontBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
