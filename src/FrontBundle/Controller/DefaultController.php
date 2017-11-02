@@ -81,16 +81,11 @@ class DefaultController extends Controller
                     $formError = 'Vous avez déja reserver cette vehicule';
                 }else
                 {
-                    $this->forward('FrontBundle:Panier:index', array(
-                        'name'  => $name,
-                        'color' => 'green',
-                    ));
+                    $this->forward('FrontBundle:Panier:index');
                 }
                 
             }
         }
-        
-        
         return $this->render('FrontBundle:Default:booking.html.twig',['vehicle'=>$CurrentVehicle[0],'form'=>$form->createView(),'error'=>$formError]);
     }
     
