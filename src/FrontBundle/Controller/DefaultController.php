@@ -46,7 +46,12 @@ class DefaultController extends Controller
     
     public function bookingAction($vehiculeId)
     {
-        return $this->render('FrontBundle:Default:booking.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $vehicleBrands = $em->getRepository('AppBundle:Vehicle')
+                ->getMarques();
+        $CurrentVehicle = $em->getRepository('AppBundle:Vehicle')
+                    ->findById($vehiculeId);
+        return $this->render('FrontBundle:Default:booking.html.twig',['vehicle'=>$CurrentVehicle[0]]);
     }
 
     public function listvehicleAction()

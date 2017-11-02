@@ -6,7 +6,7 @@ fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
     
 booking_page:
-    path: /booking/{id}
+    path: /booking/{vehiculeId}
     defaults: { _controller: FrontBundle:Default:booking}
 
 
