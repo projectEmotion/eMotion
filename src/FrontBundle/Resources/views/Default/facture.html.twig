@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+        {% block head %}
+		<title>{% block title %}Facture{% endblock %}</title>
+		<meta charset="UTF-8">
+        {% block stylesheets %}
+		<link rel="stylesheet" href="{{ asset('assets/css/pdf.css') }}">
+        
+        {% endblock %}
+        {% endblock %}
+	</head>
+		<body>
+            {% block body %}
+		<h1>Facture</h1>
+		<div class="adress adress-from">
+			<div class="adress_label">De</div>
+			<div class="adress_content">
+			<strong>eMotion</strong><br>
+			25, Rue d'amiens <br>
+			75012  Paris <br>
+			
+			</div>
+		</div>
+		
+		<div class="adress adress-to">
+			<div class="adress_label">Pour</div>
+			<div class="adress_content">
+			<strong>{{user.getfirstName}}</strong><strong>{{user.getlastName}}</strong><br>
+			{{user.getadress}} <br>
+			{{user.codePostal}}  {{user.ville}} <br>
+			
+			</div>
+		</div>
+		
+		<div class="infos">
+			<div class="infos_label">Facture n°</div>
+			<div class="infos_content"><strong></strong></div>
+			<div class="infos_label">Emise le</div>
+			<div class="infos_content">{{commande.dateAchat}}</div>
+		</div>
+		
+		<div class="cb"></div>
+		
+		<table class="items">
+			<thead>
+			<tr>
+				<th>Description</th>
+				<th>Prix HT</th>
+				<th>Prix TTC</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>descirption du reservation</td>
+				<td></td>
+				<td>{{commande.prix}}</td>
+			</tr>
+			<tr class="total total-first">
+				<td colspan="2" class="total_label">Sous-total</td>
+				<td><strong></strong></td>
+			</tr>
+			<tr class="total">
+				<td colspan="2" class="total_label">Taxe (20.00%)</td>
+				<td><strong></strong></td>
+			</tr>
+			<tr class="total total-big">
+				<td colspan="2" class="total_label">Total</td>
+				<td><strong></strong></td>
+			</tr>
+			</tbody>
+		</table>
+		
+		<footer>
+			EURL au capital de 20.000 euros<br>
+			adhérent d'un centre de gestion agréé acceptant a ce titre les réglements par chéque
+		
+		</footer>
+	
+		</body>
+    {% endblock %}
+
+</html>
