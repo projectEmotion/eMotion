@@ -59,6 +59,13 @@ class Reservation
      */
     private $status;
     
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="kilometer", type="integer", nullable=true)
+     */
+    private $kilometer;
+    
 
     /**
      * @var \AppBundle\Entity\Vehicle
@@ -224,5 +231,29 @@ class Reservation
     public function getIdVehicle()
     {
         return $this->idVehicle;
+    }
+    
+    /**
+     * Set kilometer
+     *
+     * @param integer $kilometer
+     *
+     * @return Reservation
+     */
+    public function setKilometer($kilometer)
+    {
+        $this->kilometer = $kilometer;
+
+        return $this;
+    }
+
+    /**
+     * Get kilometer
+     *
+     * @return integer
+     */
+    public function getKilometer()
+    {
+        return $this->kilometer;
     }
 }

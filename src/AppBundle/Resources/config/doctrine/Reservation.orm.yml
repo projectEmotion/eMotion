@@ -31,6 +31,11 @@ AppBundle\Entity\Reservation:
             type: datetime
             nullable: true
             column: end_date
+        kilometer:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
         status:
             type: string
             nullable: true
