@@ -3,7 +3,9 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Events;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 
 /**
  * Vehicle
@@ -399,6 +401,7 @@ class Vehicle
     
     public function lifecycleFileUpload()
     {
+        
         if(is_null($this->getFile())){
             return;
         }
@@ -417,5 +420,14 @@ class Vehicle
         
         $this->setLink($fileDir.$fileName);
         $this->setFile(null);
+        
+    }
+    
+    public function insertFile(LifecycleEventArgs $args)
+    {
+        $em = $args->getEntityManager();
+        $this->lifecycleFileUpload();
+        $em->persist($this);
+        $em->flush();
     }
 }
