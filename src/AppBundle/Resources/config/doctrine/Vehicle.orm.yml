@@ -59,6 +59,12 @@ AppBundle\Entity\Vehicle:
             options:
                 unsigned: false
             column: price_of_purchase
+        priceForHour:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: price_for_hour
         availability:
             type: boolean
             nullable: true

@@ -8,7 +8,6 @@ use FrontBundle\Form\LoginType;
 use FrontBundle\Form\ReservationType;
 use AppBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Entity\Commande;
 
 
 
@@ -19,7 +18,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $user = $this->getUser();
-        return $this->render('FrontBundle:Default:home.html.twig',['user'=>$user]); 
+        return $this->render('FrontBundle:Default:home.html.twig',['user'=>$user]);
     }
     
     public function loginAction(Request $req)
@@ -80,6 +79,12 @@ class DefaultController extends Controller
             
             if($dateVerif)
             {
+                $diff = $reservation->getEndDate()->diff($reservation->getStartDate());
+                $days = $diff->d*24;
+                $hours = $diff->h;
+                $totalHours = $days+$hours;
+                $totalPrice = $totalHours*$CurrentVehicle[0]->getpriceForHour();
+                $reservation->setPrice($totalPrice);
                 if(!$this->Session()->addToCart($reservation)){
                     $formError = 'Vous avez déja reserver cette vehicule';
                 }else
@@ -131,7 +136,8 @@ class DefaultController extends Controller
 
     public function factureAction()
     {
-        $commande = new commande();
+        $user = $this->getUser();
+        $commande = $this->getCommande();
         
         $snappy = $this->get('knp_snappy.pdf');
         
@@ -152,5 +158,7 @@ class DefaultController extends Controller
         );
     }
 
+
+ 
     
 }

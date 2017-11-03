@@ -61,6 +61,14 @@
                         <b>{{vehicle.getModel()}}</b>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <b>Prix Par Hour</b>
+                    </div>
+                    <div class="col-sm-6">
+                        <b>{{vehicle.getpriceForHour()}} €</b>
+                    </div>
+                </div>
                 <form action="{{path('booking_page',{'vehiculeId':vehicle.id})}}" method="POST">
                     <div class="row">
                             <div class="col-sm-6">

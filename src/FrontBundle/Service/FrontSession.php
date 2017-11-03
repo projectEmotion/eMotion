@@ -38,10 +38,14 @@ class FrontSession
     {
         return $this->session->get('cart');
     }
-    
-    
-
-    public function removeFromCart()
+    public function removeFromCart($index)
+    {
+        $cart = $this->getCart();
+        array_splice($cart, (int)$index,1);
+        $this->session->set('cart',$cart);
+        return true;
+    }
+    public function removeCart()
     {
         return $this->session->remove('cart');
     }

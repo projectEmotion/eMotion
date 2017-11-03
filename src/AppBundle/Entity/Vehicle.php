@@ -79,7 +79,13 @@ class Vehicle
      * @ORM\Column(name="price_of_purchase", type="integer", nullable=true)
      */
     private $priceOfPurchase;
-
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="price_for_hour", type="integer", nullable=true)
+     */
+    private $priceForHour;
     /**
      * @var boolean
      *
@@ -397,6 +403,30 @@ class Vehicle
     public function getFile()
     {
         return $this->file;
+    }
+    
+    /**
+     * Set priceForHour
+     *
+     * @param integer $priceForHour
+     *
+     * @return Vehicle
+     */
+    public function setpriceForHour($priceForHour)
+    {
+        $this->priceForHour = $priceForHour;
+
+        return $this;
+    }
+
+    /**
+     * Get priceForHour
+     *
+     * @return integer
+     */
+    public function getpriceForHour()
+    {
+        return $this->priceForHour;
     }
     
     public function lifecycleFileUpload()

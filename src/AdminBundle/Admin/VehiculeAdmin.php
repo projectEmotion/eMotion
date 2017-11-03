@@ -27,6 +27,7 @@ class VehiculeAdmin extends AbstractAdmin
         $formMapper->add('date_of_purchase','date',array('years' => range(1980,date('Y'))));
         $formMapper->add('price_of_purchase','text');
         $formMapper->add('availability','checkbox');
+        $formMapper->add('price_for_hour','text');
         $formMapper->add('vehicle_type',ChoiceType::class, array(
             'choices' => array(
                 'Scooter' => true,
