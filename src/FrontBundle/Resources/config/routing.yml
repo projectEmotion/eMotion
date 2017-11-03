@@ -46,3 +46,6 @@ prepare_page:
 order_checkout:
     path: /checkout
     defaults: { _controller: FrontBundle:Order:checkout}
+order_checkout_success:
+    path: /checkout/success
+    defaults: { _controller: FrontBundle:Order:checkoutSuccess}
