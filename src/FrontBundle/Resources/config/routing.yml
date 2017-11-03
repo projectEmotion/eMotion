@@ -18,6 +18,10 @@ listvehicle_page:
 basket_page:
     path: /basket
     defaults: { _controller: FrontBundle:Panier:affiche}
+    
+basket_valide:
+    path: /basket/valide
+    defaults: { _controller: FrontBundle:Panier:Validation}
 
 basket_remove:
     path: /basket/remove/{index}

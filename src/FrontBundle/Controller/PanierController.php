@@ -31,14 +31,18 @@ class PanierController extends Controller
         return $this->afficheAction();
     }
     
-    public function afficheAction()
+    public function afficheAction($error = '')
     {
         $cart = $this->Session()->getCart();
+        $user = $this->getUser();
         $totalPrice = 0;
-        foreach ($cart as $c){
-            $totalPrice+= $c->getPrice();
+        if(!empty($cart)){
+            foreach ($cart as $c){
+                $totalPrice+= $c->getPrice();
+            }
         }
-        return $this->render('FrontBundle:Default:basket.html.twig',['cart'=>$cart,'prix_total'=>$totalPrice]);
+        
+        return $this->render('FrontBundle:Default:basket.html.twig',['cart'=>$cart,'prix_total'=>$totalPrice,'error'=>$error,'user'=>$user]);
     }
     
     public function Session()
@@ -60,4 +64,13 @@ class PanierController extends Controller
         return $this->redirect($this->generateUrl('basket_page'));
     }
     
+    public function ValidationAction()
+    {
+        $user = $this->getUser();
+        if(!$user)
+        {
+            return $this->redirect($this->generateUrl('fos_user_security_login'));
+        }
+        return $this->redirect($this->generateUrl('prepare_page'));
+    }
 }

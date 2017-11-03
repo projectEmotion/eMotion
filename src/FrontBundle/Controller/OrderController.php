@@ -20,6 +20,7 @@ class OrderController extends Controller
    
     public function prepareAction()
     {
+        
         return $this->render('FrontBundle:Default:prepare.html.twig');
     }
 

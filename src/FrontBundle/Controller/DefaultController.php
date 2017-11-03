@@ -89,7 +89,7 @@ class DefaultController extends Controller
                     $formError = 'Vous avez déja reserver cette vehicule';
                 }else
                 {
-                    return $this->forward('FrontBundle:Panier:index');
+                    return $this->redirect($this->generateUrl('basket_page'));
                 }
                 
             }
